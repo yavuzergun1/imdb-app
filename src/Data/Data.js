@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { UseData } from "../Context/Context";
 
 function Data() {
-  const [data, setData] = useState();
-
+  const {data, setData} = UseData();
+console.log(data);
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;
     try {
@@ -12,7 +13,7 @@ function Data() {
         `https://www.omdbapi.com/?apikey=${key}&s=Batman&y=1995`
       );
       setData(data);
-      console.log(data);
+     
     } catch (err) {
       // alert('Please Enter a Valid Film Name')
     }
