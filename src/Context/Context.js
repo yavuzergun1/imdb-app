@@ -4,9 +4,12 @@ const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState();
+  const [title, setTitle] = useState();
   const values = {
-      data,
-      setData,
+    data,
+    setData,
+    title,
+    setTitle,
   };
 
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;

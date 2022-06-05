@@ -1,15 +1,22 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Search from "../Components/Search";
 import { UseData } from "../Context/Context";
-import SearchResult from "./SearchResult";
 
 function Home() {
-  const { data } = UseData();
+  const { data, title } = UseData();
   console.log(data);
-  return <div>
-    <Link to="/SearchResult" >SearchResult</Link>
-    <Outlet/>
-  </div>;
+
+  if (!data) {
+    return <p>loading</p>;
+  }
+  return (
+    <div>
+      <Search />
+      <Link to="/searchresult">SearchResult</Link>
+      Title: {data.Title}
+    </div>
+  );
 }
 
 export default Home;
