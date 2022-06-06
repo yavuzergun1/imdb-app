@@ -1,19 +1,27 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { UseData } from "../Context/Context";
+import { useEffect } from "react";
 
 function ResultDetail() {
   const { data } = UseData();
-  console.log(data);
-  if (!data) {
+  const { filmId, setFilmId, filmDetail } = UseData();
+  const { id } = useParams();
+  console.log(filmDetail);
+
+  useEffect(() => {
+    setFilmId(data.Search[id].imdbID)
+  }, []);
+  
+  
+  if (!filmDetail) {
     return <p>loading</p>;
   }
   return (
     <div>
-      ResultDetail:{data.Plot}
-      <img
-        src="https://m.media-amazon.com/images/M/MV5BNTJjMmVkZjctNjNjMS00ZmI2LTlmYWEtOWNiYmQxYjY0YWVhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
-        alt=""
-      />
+      ResultDetail:
+      <img src={filmDetail.Poster} alt="" />
+      <p>{filmDetail.Plot} </p>
     </div>
   );
 }

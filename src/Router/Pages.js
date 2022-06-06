@@ -8,11 +8,11 @@ import SearchResult from "../Pages/SearchResult";
 
 function Pages() {
   return (
-    <BrowserRouter basename="/imdb-app">
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="SearchResult" element={<SearchResult />} />
-        <Route path="SearchResult/ResultDetail" element={<ResultDetail />} />
+        <Route path=":id" element={<ResultDetail />} />
      
       </Routes>
     </BrowserRouter>

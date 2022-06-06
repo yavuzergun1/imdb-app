@@ -13,8 +13,10 @@ function Home() {
   return (
     <div>
       <Search />
-      <Link to="/searchresult">SearchResult</Link>
-      Title: {data.Title}
+      <Link to="/searchresult">
+        <button>Search</button>{" "}
+      </Link>
+   
     </div>
   );
 }

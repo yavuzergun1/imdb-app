@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import { UseData } from "../Context/Context";
+import { Link } from "react-router-dom";
 
 function Search() {
-  const [form, setForm] = useState();
   const { title, setTitle } = UseData();
+  
   return (
     <div>
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          setTitle(form);
-        }}
+        
       >
         <input
           id="input"
           placeholder="Title"
-          onChange={(e) => setForm(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
         />
+       
       </form>
     </div>
   );
