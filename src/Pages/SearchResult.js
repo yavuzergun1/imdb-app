@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AddFavorites from "../Components/AddFavorites";
 import Search from "../Components/Search";
 import { UseData } from "../Context/Context";
 
 function SearchResult() {
-  const { data } = UseData();
-  console.log(data);
+  const { data} = UseData();
+  const addFavorites= ()=>{
+  }
   if (!data.Search) {
     return <p>loading</p>;
   }
@@ -14,13 +16,15 @@ function SearchResult() {
       SearchResulta geldinnnn
       {data.Search.map((film, index)=>{
         return(
-<Link key={`/${index}`} to={`/${index}`}><img src={film.Poster} alt="" /> </Link>
-        )
+          <div key={`/${index}`}> 
+<Link  to={`/${index}`}><img src={film.Poster} alt="" /> </Link>
+{/* <input type="checkbox"  onClick={()=>{return setFavorites([...favorites, film.imdbID]) } } /> */}
+<AddFavorites film={film} />
+</div> )
       })
       }
-      
-      {data.Type}
       <Search />
+      
     </div>
   );
 }

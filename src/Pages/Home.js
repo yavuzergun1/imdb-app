@@ -4,7 +4,7 @@ import Search from "../Components/Search";
 import { UseData } from "../Context/Context";
 
 function Home() {
-  const { data, title } = UseData();
+  const { data } = UseData();
   console.log(data);
 
   if (!data) {

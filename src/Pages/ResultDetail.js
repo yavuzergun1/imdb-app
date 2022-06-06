@@ -4,10 +4,9 @@ import { UseData } from "../Context/Context";
 import { useEffect } from "react";
 
 function ResultDetail() {
-  const { data } = UseData();
-  const { filmId, setFilmId, filmDetail } = UseData();
+  const { data, setFilmId, filmDetail } = UseData();
   const { id } = useParams();
-  console.log(filmDetail);
+  // console.log(filmDetail);
 
   useEffect(() => {
     setFilmId(data.Search[id].imdbID)

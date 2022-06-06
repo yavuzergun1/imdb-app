@@ -3,7 +3,7 @@ import { UseData } from "../Context/Context";
 import { Link } from "react-router-dom";
 
 function Search() {
-  const { title, setTitle } = UseData();
+  const { setTitle } = UseData();
   
   return (
     <div>
