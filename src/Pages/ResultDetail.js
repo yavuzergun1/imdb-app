@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { UseData } from "../Context/Context";
 import { useEffect } from "react";
 import AddFavorites from "../Components/RDaddFavorites";
@@ -19,6 +19,7 @@ function ResultDetail() {
   console.log(favorites);
   return (
     <div>
+       <Link to="/favorites" >Favorites</Link>
       {filmId}
       <img src={filmDetail.Poster} alt="" />
       <AddFavorites/>

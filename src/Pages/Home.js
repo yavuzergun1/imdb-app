@@ -16,7 +16,7 @@ function Home() {
       <Link to="/searchresult">
         <button>Search</button>{" "}
       </Link>
-   
+   <Link to="/favorites" >Favorites</Link>
     </div>
   );
 }

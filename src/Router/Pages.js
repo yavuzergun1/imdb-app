@@ -5,6 +5,7 @@ import Data from "../Data/Data";
 import Home from "../Pages/Home";
 import ResultDetail from "../Pages/ResultDetail";
 import SearchResult from "../Pages/SearchResult";
+import Favorites from "../Pages/Favorites";
 
 function Pages() {
   return (
@@ -13,6 +14,7 @@ function Pages() {
         <Route path="/" element={<Home />} />
         <Route path="SearchResult" element={<SearchResult />} />
         <Route path=":id" element={<ResultDetail />} />
+        <Route path="Favorites" element={<Favorites />} />
      
       </Routes>
     </BrowserRouter>

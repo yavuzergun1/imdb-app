@@ -11,6 +11,7 @@ function SearchResult() {
   }
   return (
     <div>
+      <Link to="/favorites">Favorites</Link>
       SearchResulta geldinnnn
       {data.Search.map((film, index) => {
         return (
