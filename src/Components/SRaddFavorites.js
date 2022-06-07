@@ -15,7 +15,7 @@ function SRaddFavorites({ film }) {
 
   const deleteFavorite = () => {
     setChecked(!checked);
-    setFavorites(favorites.filter((item) => item !== film));
+    setFavorites(favorites.filter((item) => item.imdbID !== film.imdbID));
   };
 
 

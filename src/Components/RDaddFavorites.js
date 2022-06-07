@@ -17,7 +17,7 @@ function RDaddFavorites() {
     
       const deleteFavorite = () => {
         setChecked(!checked);
-        setFavorites(favorites.filter((item) => item !== filmDetail))
+        setFavorites(favorites.filter((item) => item.imdbID !== filmDetail.imdbID))
       }
   return (
     <div>

@@ -5,7 +5,6 @@ import axios from "axios";
 
 function Favorites() {
   const { favorites } = UseData();
-  const key = process.env.REACT_APP_FILM_DATA;
 
   if (!favorites) {
     <p>Loading</p>;
