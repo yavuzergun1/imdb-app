@@ -1,7 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
 import { UseData } from "../Context/Context";
-import axios from "axios";
 
 function Favorites() {
   const { favorites } = UseData();

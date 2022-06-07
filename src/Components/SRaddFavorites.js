@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { UseData } from "../Context/Context";
 
 function SRaddFavorites({ film }) {
-  const { favorites, setFavorites, filmId } = UseData();
+  const { favorites, setFavorites } = UseData();
   const [checked, setChecked] = useState(true);
   const addFavorite = () => {
     setChecked(!checked);
