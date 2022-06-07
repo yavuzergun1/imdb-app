@@ -2,11 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { UseData } from "../Context/Context";
 import { useEffect } from "react";
+import AddFavorites from "../Components/AddFavorites";
 
 function ResultDetail() {
-  const { data, setFilmId, filmDetail } = UseData();
+  const { data, filmId, setFilmId, filmDetail, setFavorites, favorites } = UseData();
   const { id } = useParams();
-  // console.log(filmDetail);
 
   useEffect(() => {
     setFilmId(data.Search[id].imdbID)
@@ -16,10 +16,12 @@ function ResultDetail() {
   if (!filmDetail) {
     return <p>loading</p>;
   }
+  console.log(favorites);
   return (
     <div>
-      ResultDetail:
+      {filmId}
       <img src={filmDetail.Poster} alt="" />
+      <AddFavorites/>
       <p>{filmDetail.Plot} </p>
     </div>
   );

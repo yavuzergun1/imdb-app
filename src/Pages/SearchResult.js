@@ -6,7 +6,6 @@ import { UseData } from "../Context/Context";
 
 function SearchResult() {
   const { data } = UseData();
-  const addFavorites = () => {};
   if (!data.Search) {
     return <p>loading</p>;
   }
@@ -19,6 +18,7 @@ function SearchResult() {
             <Link to={`/${index}`}>
               <img src={film.Poster} alt="" />{" "}
             </Link>
+            {data.Search[index].imdbID}
             <AddFavorites film={film} />
           </div>
         );
