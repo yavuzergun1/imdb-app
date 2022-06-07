@@ -9,6 +9,7 @@ export const DataProvider = ({ children }) => {
   const [filmDetail, setFilmDetail]= useState();
   const [favorites, setFavorites]= useState([]);
   const [index, setIndex]= useState();
+  const [favData, setFavData]= useState();
   const values = {
     data,
     setData,
@@ -22,6 +23,8 @@ export const DataProvider = ({ children }) => {
     setFavorites,
     index,
     setIndex,
+    favData,
+    setFavData,
   };
 
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;

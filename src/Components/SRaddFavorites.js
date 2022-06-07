@@ -6,16 +6,16 @@ function SRaddFavorites({ film }) {
   const [checked, setChecked] = useState(true);
   const addFavorite = () => {
     setChecked(!checked);
-    if (favorites.includes(film.imdbID) !== true) {
+    if ((favorites.map(favorite=> favorite.imdbID)).includes(film.imdbID) !== true) {
       if (checked === true) {
-        setFavorites([...favorites, film.imdbID]);
+        setFavorites([...favorites, film]);
       }
     }
   };
 
   const deleteFavorite = () => {
     setChecked(!checked);
-    setFavorites(favorites.filter((item) => item !== film.imdbID));
+    setFavorites(favorites.filter((item) => item !== film));
   };
 
 

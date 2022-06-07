@@ -3,21 +3,21 @@ import { UseData } from '../Context/Context';
 import { useState } from 'react';
 
 function RDaddFavorites() {
-    const { favorites, setFavorites, filmId } = UseData();
+    const { favorites, setFavorites, filmId, filmDetail } = UseData();
     const [checked, setChecked] = useState(true);
    console.log(favorites);
     const addFavorite = () => {
         setChecked(!checked);
-        if (favorites.includes(filmId) !== true) {
+        if ((favorites.map(favorite=> favorite.imdbID)).includes(filmId) !== true) {
           if (checked === true) {
-            setFavorites([...favorites, filmId]);
+            setFavorites([...favorites, filmDetail]);
           }
         }
       };
     
       const deleteFavorite = () => {
         setChecked(!checked);
-        setFavorites(favorites.filter((item) => item !== filmId))
+        setFavorites(favorites.filter((item) => item !== filmDetail))
       }
   return (
     <div>
