@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AddFavorites from "../Components/AddFavorites";
+import AddFavorites from "../Components/SRaddFavorites";
 import Search from "../Components/Search";
 import { UseData } from "../Context/Context";
 

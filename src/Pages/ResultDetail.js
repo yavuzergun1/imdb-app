@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { UseData } from "../Context/Context";
 import { useEffect } from "react";
-import AddFavorites from "../Components/AddFavorites";
+import AddFavorites from "../Components/RDaddFavorites";
 
 function ResultDetail() {
   const { data, filmId, setFilmId, filmDetail, setFavorites, favorites } = UseData();

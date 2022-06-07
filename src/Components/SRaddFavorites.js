@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { UseData } from "../Context/Context";
 
-function AddFavorites({ film }) {
+function SRaddFavorites({ film }) {
   const { favorites, setFavorites, filmId } = UseData();
   const [checked, setChecked] = useState(true);
   const addFavorite = () => {
     setChecked(!checked);
-    if (favorites.includes(film.imdbID, filmId) !== true) {
+    if (favorites.includes(film.imdbID) !== true) {
       if (checked === true) {
         setFavorites([...favorites, film.imdbID]);
       }
@@ -31,4 +31,4 @@ function AddFavorites({ film }) {
   );
 }
 
-export default AddFavorites;
+export default SRaddFavorites;
