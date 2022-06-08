@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Search from "../Components/Search";
 import { UseData } from "../Context/Context";
+import Slider from "../Components/Slider"
 
 function Home() {
   const { data } = UseData();
@@ -14,6 +15,8 @@ function Home() {
     <div>
       <Search />
       <Link to="/favorites">Favorites</Link>
+      <div> <Slider/></div>
+     
     </div>
   );
 }
