@@ -23,7 +23,7 @@ export const DataProvider = ({ children }) => {
     index,
     setIndex,
   };
-
+console.log(filmId);
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;
 };
 

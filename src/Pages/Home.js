@@ -5,7 +5,7 @@ import { UseData } from "../Context/Context";
 
 function Home() {
   const { data } = UseData();
-  console.log(data);
+  // console.log(data);
 
   if (!data) {
     return <p>loading</p>;

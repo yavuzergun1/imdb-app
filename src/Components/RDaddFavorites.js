@@ -5,7 +5,7 @@ import { useState } from "react";
 function RDaddFavorites() {
   const { favorites, setFavorites, filmId, filmDetail } = UseData();
   const [checked, setChecked] = useState(true);
-  console.log(favorites);
+  // console.log(favorites);
 
   const addFavorite = () => {
     setChecked(!checked);

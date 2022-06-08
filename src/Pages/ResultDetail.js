@@ -12,19 +12,23 @@ console.log(filmDetail);
   useEffect(() => {
     setFilmId(data.Search[id].imdbID);
   }, [data]);
+  console.log(data);
 
   useEffect(() => {
-    localStorage.setItem("filmDetail", JSON.stringify(filmDetail));
-    setLocalFilmDetail(JSON.parse (localStorage.getItem("filmDetail")));
-    console.log(localFilmDetail);
+    filmDetail &&
+    localStorage.setItem("localFilmDetail", JSON.stringify(filmDetail));
+    setLocalFilmDetail(JSON.parse(localStorage.getItem( "localFilmDetail")));
+    console.log(filmDetail);
   }, [filmDetail]);
+  console.log(localFilmDetail);
+
   if (!localFilmDetail) {
     return <p>loading</p>;
   }
   return (
     <div>
       <Link to="/favorites">Favorites</Link>
-      {/* {filmId} */}
+      {filmId}
       <img src={localFilmDetail.Poster} alt="" />
       <AddFavorites />
       <p>{localFilmDetail.Plot} </p>

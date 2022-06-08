@@ -20,7 +20,7 @@ function SRaddFavorites({ film }) {
 
 
 
-  console.log(favorites);
+  // console.log(favorites);
   return (
     <div>
       <input
