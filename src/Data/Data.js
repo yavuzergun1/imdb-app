@@ -12,7 +12,6 @@ function Data() {
         `https://www.omdbapi.com/?apikey=${key}&s=${title}&y=`
       );
       setData(data);
-      console.log(data);
     } catch (err) {
       alert("Please Enter a Valid Film Name");
     }

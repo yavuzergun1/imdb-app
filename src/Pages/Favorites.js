@@ -7,7 +7,7 @@ function Favorites() {
   const [localFavorites, setLocalFavorites] = useState([]);
   console.log(favorites);
   useEffect(() => {
-    localStorage.setItem("localFavorites", JSON.stringify(favorites));
+     localStorage.setItem("localFavorites", JSON.stringify(favorites));
     setLocalFavorites(JSON.parse(localStorage.getItem("localFavorites")));
   }, [favorites]);
 

@@ -5,19 +5,19 @@ import { useEffect } from "react";
 import AddFavorites from "../Components/RDaddFavorites";
 
 function ResultDetail() {
-  const { data, filmId, setFilmId, filmDetail} =UseData();
+  const { data, filmId, setFilmId, filmDetail } = UseData();
   const { id } = useParams();
-  const [localFilmDetail, setLocalFilmDetail]=useState();
-console.log(filmDetail);
+  const [localFilmDetail, setLocalFilmDetail] = useState();
+  console.log(filmDetail);
   useEffect(() => {
     setFilmId(data.Search[id].imdbID);
   }, [data]);
-  console.log(data);
+  console.log(filmDetail);
 
   useEffect(() => {
     filmDetail &&
-    localStorage.setItem("localFilmDetail", JSON.stringify(filmDetail));
-    setLocalFilmDetail(JSON.parse(localStorage.getItem( "localFilmDetail")));
+      localStorage.setItem("localFilmDetail", JSON.stringify(filmDetail));
+    setLocalFilmDetail(JSON.parse(localStorage.getItem("localFilmDetail")));
     console.log(filmDetail);
   }, [filmDetail]);
   console.log(localFilmDetail);

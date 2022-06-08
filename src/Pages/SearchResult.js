@@ -9,16 +9,17 @@ function SearchResult() {
   const [localData, setLocalData] = useState();
 console.log(data);
   useEffect(() => {
+    data &&
     localStorage.setItem("data", JSON.stringify(data.Search));
     setLocalData(JSON.parse(localStorage.getItem("data")));
   }, [data])
+  console.log(data);
   if (!localData) {
     return <p>loading</p>;
   }
   return (
     <div>
       <Link to="/favorites">Favorites</Link>
-      SearchResulta geldinnnn
       {localData.map((film, index) => {
         return (
           <div key={`/${index}`}>
