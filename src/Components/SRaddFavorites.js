@@ -6,7 +6,10 @@ function SRaddFavorites({ film }) {
   const [checked, setChecked] = useState(true);
   const addFavorite = () => {
     setChecked(!checked);
-    if ((favorites.map(favorite=> favorite.imdbID)).includes(film.imdbID) !== true) {
+    if (
+      favorites.map((favorite) => favorite.imdbID).includes(film.imdbID) ==
+      false
+    ) {
       if (checked === true) {
         setFavorites([...favorites, film]);
       }
@@ -18,9 +21,6 @@ function SRaddFavorites({ film }) {
     setFavorites(favorites.filter((item) => item.imdbID !== film.imdbID));
   };
 
-
-
-  // console.log(favorites);
   return (
     <div>
       <input

@@ -11,9 +11,10 @@ function Data() {
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&s=${title}&y=`
       );
+      if (data.Response==='False'){throw new SyntaxError()}
       setData(data);
     } catch (err) {
-      alert("Please Enter a Valid Film Name");
+      alert("Your film name is undefined. Look at the films related as 'undefined' or write a valid film name" );
     }
     if (filmId) {
       try {
