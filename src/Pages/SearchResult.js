@@ -7,11 +7,11 @@ import { UseData } from "../Context/Context";
 function SearchResult() {
   const { data } = UseData();
   const [localData, setLocalData] = useState();
-
+console.log(data);
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(data.Search));
     setLocalData(JSON.parse(localStorage.getItem("data")));
-  }, [])
+  }, [data])
   if (!localData) {
     return <p>loading</p>;
   }

@@ -13,9 +13,7 @@ function Home() {
   return (
     <div>
       <Search />
-      <Link to="/searchresult">
-        <button>Search</button>{" "}
-      </Link>
+     
    <Link to="/favorites" >Favorites</Link>
     </div>
   );

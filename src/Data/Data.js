@@ -10,20 +10,20 @@ function Data() {
     try {
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&s=${title}&y=`
+      );
+      setData(data);
+      console.log(data);
+    } catch (err) {
+      alert("Please Enter a Valid Film Name");
+    }
+    if (filmId) {
+      try {
+        const { data } = await axios.get(
+          `https://www.omdbapi.com/?apikey=${key}&i=${filmId}`
         );
-        setData(data);
-      } catch (err) {
-        alert('Please Enter a Valid Film Name')
-      }
-      if(filmId) {
-        try {
-          const { data } = await axios.get(
-            `https://www.omdbapi.com/?apikey=${key}&i=${filmId}`
-          );
-          setFilmDetail(data);
-        } catch (err) {}
-      }
-      
+        setFilmDetail(data);
+      } catch (err) {}
+    }
   };
 
   useEffect(() => {
