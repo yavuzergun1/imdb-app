@@ -3,14 +3,14 @@ import { UseData } from "../Context/Context";
 
 function SRaddFavorites({ film }) {
   const { favorites, setFavorites } = UseData();
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
   const addFavorite = () => {
-    setChecked(!checked);
+    setChecked(checked);
     if (
       favorites.map((favorite) => favorite.imdbID).includes(film.imdbID) ==
       false
     ) {
-      if (checked === true) {
+      if (checked === false) {
         setFavorites([...favorites, film]);
       }
     }
@@ -25,7 +25,7 @@ function SRaddFavorites({ film }) {
     <div>
       <input
         type="checkbox"
-        onChange={checked ? addFavorite : deleteFavorite}
+        onChange={!checked ? addFavorite : deleteFavorite}
       />
     </div>
   );

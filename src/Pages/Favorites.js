@@ -19,8 +19,8 @@ function Favorites() {
     <div>
       {localFavorites.map((favorite, index) => {
         return (
-          <div>
-            <img key={index} src={favorite.Poster} alt="" />
+          <div key={index}>
+            <img src={favorite.Poster} alt="" />
             <FavDeleteFavorites favorite={favorite} />
           </div>
         );
