@@ -1,7 +1,7 @@
 import React from "react";
 import { UseData } from "../Context/Context";
 import { useState, useEffect } from "react";
-
+import FavDeleteFavorites from "../Components/FavDeleteFavorites";
 function Favorites() {
   const { favorites } = UseData();
   const [localFavorites, setLocalFavorites]=useState([]);
@@ -21,6 +21,7 @@ console.log(favorites);
         return (
             <img key={index} src={favorite.Poster} alt="" />
         );
+        <FavDeleteFavorites/>
       })}
     </div>
   );

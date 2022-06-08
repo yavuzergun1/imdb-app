@@ -12,7 +12,6 @@ function SearchResult() {
     localStorage.setItem("data", JSON.stringify(data.Search));
     setLocalData(JSON.parse(localStorage.getItem("data")));
   }, [])
-  // console.log(localData);
   if (!localData) {
     return <p>loading</p>;
   }
