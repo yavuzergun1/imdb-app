@@ -1,5 +1,5 @@
 .slide-container{
-  width: 40%;
+  width: 80%;
   height: auto;
  
   
@@ -9,4 +9,15 @@
  width: 100%;
  background-repeat: no-repeat;
  background-size: contain;
+}
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.images-wrap{
+  border-color: aqua;
 }
