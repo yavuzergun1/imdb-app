@@ -1,8 +1,9 @@
 import React from "react";
+// import "./home.scss";
 import { Link } from "react-router-dom";
-import Search from "../Components/Search";
-import { UseData } from "../Context/Context";
-import Slider from "../Components/Slider"
+import Search from "../../Components/Search";
+import { UseData } from "../../Context/Context";
+import Slider from "../../Components/Slider/Slider";
 
 function Home() {
   const { data } = UseData();
