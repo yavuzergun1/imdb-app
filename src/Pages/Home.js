@@ -15,6 +15,7 @@ function Home() {
     <div>
       <Search />
       <Link to="/favorites">Favorites</Link>
+      <h1>Most Popular Films</h1>
       <div> <Slider/></div>
      
     </div>
