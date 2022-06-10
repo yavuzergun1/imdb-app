@@ -13,7 +13,7 @@ function Home() {
     return <p>loading</p>;
   }
   return (
-    <div>
+    <div className="home-main-container">
       <Navbar />
       <h2>Most Popular Films</h2>
       <div> <Slider/></div>
