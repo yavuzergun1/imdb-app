@@ -4,6 +4,7 @@ import { UseData } from "../../Context/Context";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+
 function Search() {
   const { setTitle } = UseData();
   const [form, setForm] = useState();
@@ -12,7 +13,12 @@ function Search() {
     <nav>
       <div className="nav-first-container">
         <div className="link-container">
-          <h1>topic</h1>
+          <div className="logo">
+          <img className="movie" src={require("../../Assets/MovieUP-Logo@3x.png" )}alt="" />
+          <img className="up" src={require("../../Assets/up.png" )}alt="" />
+          </div>
+       
+          
           <Link to="/">Home</Link>
           <Link to="/favorites">Favorites</Link>
         </div>

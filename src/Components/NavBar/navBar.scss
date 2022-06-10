@@ -10,18 +10,43 @@ nav {
 
     .link-container {
       @extend nav;
-      width: 40%;
-      justify-content: space-around;
+      width: 350px;
     }
+    picture{
+      width: 216px;
+      height: 40px
+    }
+    .logo{
+      width: 216.59px;
+      height: 40.45;
+      display: flex;
+      align-items: baseline;
+      h1{
+        padding-right: 2px;
+        font-family:  Arial, sans-serif;
+        font-size: 3rem;
+        font-weight: 850;
+      }
+      .movie{
+        width: 70%;
+        height: 40.45px;
+      }
+      .up{
+        width: 30%;
+        height: 40.45px
+
+      }
+    }
+    
   }
 
   .nav-second-container {
     @extend nav;
-    justify-content: flex-end;
+    // @extend .nav-first-container; PC YAKAN SATIR! :)
+    width: 50%;
+    justify-content: center;
     form {
       @extend nav;
-      width: 50%;
-      justify-content: flex-end;
     }
   }
 }
