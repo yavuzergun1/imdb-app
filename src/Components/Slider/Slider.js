@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../App.css";
+import "./slider.scss";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
