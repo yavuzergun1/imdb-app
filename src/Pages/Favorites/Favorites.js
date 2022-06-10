@@ -1,13 +1,13 @@
 import React from "react";
-import { UseData } from "../Context/Context";
+import { UseData } from "../../Context/Context";
 import { useState, useEffect } from "react";
-import FavDeleteFavorites from "../Components/FavDeleteFavorites";
+import FavDeleteFavorites from "../../Components/Checkboxes/FavDeleteFavorites";
 function Favorites() {
   const { favorites } = UseData();
   const [localFavorites, setLocalFavorites] = useState([]);
   console.log(favorites);
   useEffect(() => {
-     localStorage.setItem("localFavorites", JSON.stringify(favorites));
+    localStorage.setItem("localFavorites", JSON.stringify(favorites));
     setLocalFavorites(JSON.parse(localStorage.getItem("localFavorites")));
   }, [favorites]);
 

@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import AddFavorites from "../Components/SRaddFavorites";
-import Search from "../Components/Search";
-import { UseData } from "../Context/Context";
+import AddFavorites from "../../Components/Checkboxes/SRaddFavorites";
+import Search from "../../Components/Search/Search";
+import { UseData } from "../../Context/Context";
 
 function SearchResult() {
   const { data } = UseData();
   const [localData, setLocalData] = useState();
-console.log(data);
+  console.log(data);
   useEffect(() => {
-    data &&
-    localStorage.setItem("data", JSON.stringify(data.Search));
+    data && localStorage.setItem("data", JSON.stringify(data.Search));
     setLocalData(JSON.parse(localStorage.getItem("data")));
-  }, [data])
+  }, [data]);
   console.log(data);
   if (!localData) {
     return <p>loading</p>;

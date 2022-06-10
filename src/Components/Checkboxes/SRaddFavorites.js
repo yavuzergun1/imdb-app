@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { UseData } from "../Context/Context";
+import { UseData } from "../../Context/Context";
 
 function SRaddFavorites({ film }) {
   const { favorites, setFavorites } = UseData();

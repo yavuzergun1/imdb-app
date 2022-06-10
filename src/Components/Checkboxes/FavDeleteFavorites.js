@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { UseData } from "../Context/Context";
+import { UseData } from "../../Context/Context";
 
 function FavDeleteFavorites({ favorite }) {
   const { favorites, setFavorites } = UseData();

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { UseData } from "../Context/Context";
+import { UseData } from "../../Context/Context";
 import { useEffect } from "react";
-import AddFavorites from "../Components/RDaddFavorites";
+import AddFavorites from "../../Components/Checkboxes/RDaddFavorites";
 
 function ResultDetail() {
   const { data, filmId, setFilmId, filmDetail } = UseData();

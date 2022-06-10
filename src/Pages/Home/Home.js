@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.scss";
 import { Link } from "react-router-dom";
-import Search from "../../Components/Search";
+import Search from "../../Components/Search/Search";
 import { UseData } from "../../Context/Context";
 import Slider from "../../Components/Slider/Slider";
 

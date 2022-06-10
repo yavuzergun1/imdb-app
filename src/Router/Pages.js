@@ -1,11 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { DataProvider } from "../Context/Context";
-import Data from "../Data/Data";
 import Home from "../Pages/Home/Home";
-import ResultDetail from "../Pages/ResultDetail";
-import SearchResult from "../Pages/SearchResult";
-import Favorites from "../Pages/Favorites";
+import ResultDetail from "../Pages/ResultDetail/ResultDetail";
+import SearchResult from "../Pages/SearchResult/SearchResult";
+import Favorites from "../Pages/Favorites/Favorites";
 
 function Pages() {
   return (
@@ -15,7 +13,6 @@ function Pages() {
         <Route path="SearchResult" element={<SearchResult />} />
         <Route path=":id" element={<ResultDetail />} />
         <Route path="Favorites" element={<Favorites />} />
-     
       </Routes>
     </BrowserRouter>
   );
