@@ -7,6 +7,7 @@ import Favorites from "../Pages/Favorites/Favorites";
 
 function Pages() {
   return (
+
     <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Home />} />

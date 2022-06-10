@@ -8,6 +8,7 @@ import Data from "./Data/Data";
 
 function App() {
   return (
+ 
     <DataProvider>
       <Pages />
       <Data/>

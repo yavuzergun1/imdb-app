@@ -15,9 +15,8 @@ nav {
     }
   }
 
-  nav-second-container {
+  .nav-second-container {
     @extend nav;
-    @extend .nav-first-container;
     justify-content: flex-end;
     form {
       @extend nav;
