@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.scss";
 import { Link } from "react-router-dom";
-import Search from "../../Components/Search/Search";
+import Navbar from "../../Components/NavBar/NavBar";
 import { UseData } from "../../Context/Context";
 import Slider from "../../Components/Slider/Slider";
 
@@ -14,9 +14,8 @@ function Home() {
   }
   return (
     <div>
-      <Search />
-      <Link to="/favorites">Favorites</Link>
-      <h1>Most Popular Films</h1>
+      <Navbar />
+      <h2>Most Popular Films</h2>
       <div> <Slider/></div>
      
     </div>

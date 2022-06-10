@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { UseData } from "../../Context/Context";
 import { useEffect } from "react";
+import NavBar from "../../Components/NavBar/NavBar";
 import AddFavorites from "../../Components/Checkboxes/RDaddFavorites";
 
 function ResultDetail() {
@@ -27,9 +28,13 @@ function ResultDetail() {
   }
   return (
     <div>
-      <Link to="/favorites">Favorites</Link>
-      {filmId}
-      <img src={localFilmDetail.Poster} alt="" />
+      <NavBar />
+      <div>
+        {" "}
+        {filmId}
+        <img src={localFilmDetail.Poster} alt="" />
+      </div>
+
       <AddFavorites />
       <p>{localFilmDetail.Plot} </p>
     </div>

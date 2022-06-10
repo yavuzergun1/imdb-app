@@ -2,6 +2,8 @@ import React from "react";
 import { UseData } from "../../Context/Context";
 import { useState, useEffect } from "react";
 import FavDeleteFavorites from "../../Components/Checkboxes/FavDeleteFavorites";
+import NavBar from "../../Components/NavBar/NavBar";
+
 function Favorites() {
   const { favorites } = UseData();
   const [localFavorites, setLocalFavorites] = useState([]);
@@ -17,6 +19,7 @@ function Favorites() {
   console.log(localFavorites);
   return (
     <div>
+      <NavBar/>
       {localFavorites.map((favorite, index) => {
         return (
           <div key={index}>

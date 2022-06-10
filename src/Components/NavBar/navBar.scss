@@ -1,0 +1,28 @@
+nav {
+  height: 128px;
+  display: flex;
+  align-items: center;
+
+  .nav-first-container {
+    @extend nav;
+    width: 50%;
+    justify-content: center;
+
+    .link-container {
+      @extend nav;
+      width: 40%;
+      justify-content: space-around;
+    }
+  }
+
+  nav-second-container {
+    @extend nav;
+    @extend .nav-first-container;
+    justify-content: flex-end;
+    form {
+      @extend nav;
+      width: 50%;
+      justify-content: flex-end;
+    }
+  }
+}

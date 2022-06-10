@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AddFavorites from "../../Components/Checkboxes/SRaddFavorites";
-import Search from "../../Components/Search/Search";
+import NavBar from "../../Components/NavBar/NavBar";
 import { UseData } from "../../Context/Context";
 
 function SearchResult() {
@@ -18,7 +18,7 @@ function SearchResult() {
   }
   return (
     <div>
-      <Link to="/favorites">Favorites</Link>
+      <NavBar />
       {localData.map((film, index) => {
         return (
           <div key={`/${index}`}>
@@ -30,7 +30,7 @@ function SearchResult() {
           </div>
         );
       })}
-      <Search />
+      
     </div>
   );
 }
