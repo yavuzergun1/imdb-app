@@ -8,23 +8,15 @@ import AddFavorites from "../../Components/Checkboxes/RDaddFavorites";
 function ResultDetail() {
   const { data, filmId, setFilmId, filmDetail } = UseData();
   const { id } = useParams();
-  const [localFilmDetail, setLocalFilmDetail] = useState();
-  console.log(filmDetail);
+
+
   useEffect(() => {
     setFilmId(data.Search[id].imdbID);
-  }, [data]);
+  }, []);
   console.log(filmDetail);
 
-  useEffect(() => {
-    filmDetail &&
-      localStorage.setItem("localFilmDetail", JSON.stringify(filmDetail));
-    setLocalFilmDetail(JSON.parse(localStorage.getItem("localFilmDetail")));
-    console.log(filmDetail);
-  }, [filmDetail]);
-  console.log(localFilmDetail);
-
-  if (!localFilmDetail) {
-    return <p>loading</p>;
+  if (!filmDetail) {
+    return <p>Loading Film Data...</p>;
   }
   return (
     <div>
@@ -32,11 +24,11 @@ function ResultDetail() {
       <div>
         {" "}
         {filmId}
-        <img src={localFilmDetail.Poster} alt="" />
+        <img src={filmDetail.Poster} alt="" />
       </div>
 
       <AddFavorites />
-      <p>{localFilmDetail.Plot} </p>
+      <p>{filmDetail.Plot} </p>
     </div>
   );
 }
