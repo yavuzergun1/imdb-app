@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../../Components/NavBar/NavBar";
 import { UseData } from "../../Context/Context";
 import Slider from "../../Components/Slider/Slider";
+import Header from "../../Components/Header/Header";
 
 function Home() {
   const { data } = UseData();
@@ -15,6 +16,7 @@ function Home() {
   return (
     <div className="home-main-container">
       <Navbar />
+      <Header/>
       <h2>Most Popular Films</h2>
       <div> <Slider/></div>
      
