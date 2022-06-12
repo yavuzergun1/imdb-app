@@ -10,6 +10,8 @@ export const DataProvider = ({ children }) => {
   const [favorites, setFavorites]= useState([]);
   const [index, setIndex]= useState();
   const [year, setYear]= useState();
+  const [type, setType]= useState();
+  const [selectYear, setSelectYear]= useState();
   const values = {
     data,
     setData,
@@ -25,7 +27,12 @@ export const DataProvider = ({ children }) => {
     setIndex,
     year,
     setYear,
+    selectYear,
+    setSelectYear,
+    type,
+    setType,
   };
+
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;
 };
 
