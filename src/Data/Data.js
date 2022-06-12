@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { UseData } from "../Context/Context";
 
 function Data() {
-  const { data, setData, title, filmId, setFilmDetail } = UseData();
+  const { data, setData, title, filmId, setFilmDetail, year } = UseData();
+  console.log(year);
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;
     try {

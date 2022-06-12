@@ -9,7 +9,7 @@ function Search() {
   const [form, setForm] = useState();
   const navigate = useNavigate();
   return (
-    <nav className="header-main">
+    <nav className="nav-header-main">
       <div className="nav-first-container">
         <div className="nav-link-container">
           <div className="logo">
