@@ -1,88 +1,94 @@
-// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-nav {
+.header-main {
   height: 128px;
   display: flex;
   align-items: center;
+}
 
-  .nav-first-container {
-    @extend nav;
-    width: 50%;
-    justify-content: center;
+.nav-first-container {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+.nav-link-container {
+  display: flex;
+  width: 450px;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links{
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  width: 216.59px;
+  height: 40.45;
+  display: flex;
+  align-items: baseline;
+}
+.movie {
+  width: 70%;
+  height: 40.45px;
+}
+.up {
+  width: 30%;
+  height: 40.45px;
+}
 
-    .link-container {
-      @extend nav;
-      width: 400px;
-      justify-content: space-between;
+.home {
+  width: 55px;
+  height: 27px;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+.favorites {
+  @extend .home;
+  width: auto;
+  font-weight: 500;
+  color: rgba(245, 197, 24, 0.9);
+}
 
-      .logo {
-        width: 216.59px;
-        height: 40.45;
-        display: flex;
-        align-items: baseline;
-
-        .movie {
-          width: 70%;
-          height: 40.45px;
-        }
-        .up {
-          width: 30%;
-          height: 40.45px;
-        }
-      }
-      .home {
-        width: 55px;
-        height: 27px;
-        text-decoration: none;
-        color: #000000;
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-      }
-      .favorites {
-        @extend .home;
-        font-weight: 500;
-        color: rgba(245, 197, 24, 0.9);
-      }
-    }
+.nav-second-container {
+  display: flex; // @extend .nav-first-container; PC YAKAN SATIR! :)
+  width: 50%;
+  justify-content: center;
+}
+.nav-form {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.nav-input {
+  pointer-events: all;
+  width: 443px;
+  height: 68px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding-left: 20px;
+  background-color: #f3f3f3;
+  &::placeholder {
+    width: 215px;
+    height: 27px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #636363;
   }
-
-  .nav-second-container {
-    @extend nav;
-    // @extend .nav-first-container; PC YAKAN SATIR! :)
-    width: 50%;
-    justify-content: center;
-    form {
-      @extend nav;
-    }
-    input {
-      pointer-events: all;
-      width: 443px;
-      height: 68px;
-      background: #f3f3f3;
-      border-radius: 8px;
-      padding-left: 20px;
-      background-color: #F3F3F3;;
-      &::placeholder {
-        width: 215px;
-        height: 27px;
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 27px;
-        color: #636363;
-      }
-    }
-    img {
-      position: relative;
-      right: 50px;
-      width: 23.99px;
-      height: 24px;
-      // background: #A4A4A4;
-    }
-  }
+}
+.nav-search-img{
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  // background: #A4A4A4;
 }

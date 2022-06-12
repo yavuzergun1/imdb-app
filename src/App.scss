@@ -1,2 +1,61 @@
-@import "./Components/Slider/slider.scss"
+@import "./Components/Slider/slider.scss";
+@import "./Components/NavBar/navBar.scss";
+@import "./Components/Header/header.scss";
 
+@media (max-width: 970px) {
+  .nav-first-container {
+    width: 65%;
+  }
+  .nav-input {
+    width: 280px;
+    height: 40px;
+    &::placeholder {
+      font-size: 15px;
+    }
+  }
+  .nav-search-img {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 820px) {
+    .header-main {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+    .nav-first-container {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .nav-link-container {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .nav-input {
+        width: 200px;
+        height: 30px;
+        &::placeholder {
+          font-size: 13px;
+        }
+      }
+      .nav-search-img {
+        right: 8px;
+        img {
+          width: 17px;
+          height: 17px;
+          
+        }
+      }
+    .nav-second-container {
+      justify-content: flex-start;
+    }
+    @media (max-width: 400px) {
+      .nav-link-container {
+        flex-direction: column;
+      }
+    }
+  }
+}

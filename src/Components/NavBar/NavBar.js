@@ -9,9 +9,9 @@ function Search() {
   const [form, setForm] = useState();
   const navigate = useNavigate();
   return (
-    <nav>
+    <nav className="header-main">
       <div className="nav-first-container">
-        <div className="link-container">
+        <div className="nav-link-container">
           <div className="logo">
             <img
               className="movie"
@@ -20,19 +20,20 @@ function Search() {
             />
             <img className="up" src={require("../../Assets/up.png")} alt="" />
           </div>
-
-          <Link className="home" to="/">
-            Home
-          </Link>
-          <Link className="favorites" to="/favorites">
-            Favorites
-          </Link>
+          <div className="nav-links">
+            <Link className="home" to="/">
+              Home
+            </Link>
+            <Link className="favorites" to="/favorites">
+              Favorites
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="nav-second-container">
         <form
-          className="search-container"
+          className="nav-form"
           onSubmit={(e) => {
             e.preventDefault();
             setTitle(form);
@@ -40,12 +41,12 @@ function Search() {
           }}
         >
           <input
-            id="input"
+            className="nav-input"
             placeholder="Enter movie name here"
             onChange={(e) => setForm(e.target.value)}
           />
 
-          <Link to="/searchresult">
+          <Link className="nav-search-img" to="/searchresult">
             <img
               src={require("../../Assets/search.png")}
               onClick={() => setTitle(form)}
