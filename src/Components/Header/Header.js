@@ -43,21 +43,24 @@ function Header() {
           {/* YEAR */}
           <SelectYear />
           {/* TYPE */}
-          <select className="movies" onChange={(e) => setType(e.target.value)}>
+          <select className="header-movies" onChange={(e) => setType(e.target.value)}>
             <option>Type</option>
             <option value="movie">Movie</option>
             <option value="series">Series</option>
             <option value="episode">Episode</option>
           </select>
           {/* SEARCH */}
+          <div className="header-text-container">
           <input
             className="header-input"
             placeholder="Enter movie name here"
             onChange={(e) => setForm(e.target.value)}
           />{" "}
-          <Link className="header-search-button" to="/searchresult">
             <img src={require("../../Assets/search.png")} alt="" />
-            <button onClick={() => setTitle(form)}>
+          </div>
+          
+          <Link className="header-search-button" to="/searchresult">
+            <button  onClick={() => setTitle(form)}>
               Search
               <img src={require("../../Assets/arrow-right 1.png")} />
             </button>

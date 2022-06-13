@@ -4,10 +4,9 @@ import { UseData } from "../../Context/Context";
 function SelectYear() {
   const { year, setYear } = UseData();
   return (
-    <div>
+  
       <select
-        id="year"
-        name="year"
+        className="header-year"
         onChange={(e) => setYear(e.target.value)}
       >
         <option>Year</option>
@@ -163,7 +162,7 @@ function SelectYear() {
         <option value="2049">2049</option>
         <option value="2050">2050</option>
       </select>
-    </div>
+    
   );
 }
 
