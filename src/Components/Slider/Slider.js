@@ -16,31 +16,35 @@ const properties = {
 
 const slideImages = [
   {
-    url: "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    url: require("./../../Assets/braveheart.jpg"),
   },
   {
-    url: "https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg",
+    url:require("./../../Assets/avatar.png"),
   },
   {
-    url: "https://m.media-amazon.com/images/M/MV5BMzkzMmU0YTYtOWM3My00YzBmLWI0YzctOGYyNTkwMWE5MTJkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    url: require("./../../Assets/casablanca.jpg"),
   },
   {
-    url: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    url: require("./../../Assets/esaretinbedeli.jpg"),
   },
   {
-    url: "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    url: require("./../../Assets/forrestgump.jpg"),
   },
   {
-    url: "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    url: require("./../../Assets/gladiator.jpg"),
   },
   {
-    url: "https://m.media-amazon.com/images/M/MV5BOWRiZDIxZjktMTA1NC00MDQ2LWEzMjUtMTliZmY3NjQ3ODJiXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    url: require("./../../Assets/pianist.jpg"),
+  },
+  {
+    url: require("./../../Assets/godfather.jpg"),
   },
 ];
 
 const Slider = () => {
   return (
     <div className="slide-container">
+      <h2>Popular Films</h2>
       <Slide {...properties}>
         {slideImages.map((slideImage, index) => (
           <div className="each-slide" key={index}>

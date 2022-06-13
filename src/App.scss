@@ -1,10 +1,13 @@
 @import "./Components/Slider/slider.scss";
 @import "./Components/NavBar/navBar.scss";
 @import "./Components/Header/header.scss";
+@import "./Components/Slider/slider.scss";
 
 * {
   box-sizing: border-box;
 }
+
+
 
 @media (max-width: 970px) {
   .nav-first-container {
@@ -22,6 +25,9 @@
       width: 20px;
       height: 20px;
     }
+  }
+  .each-slide{
+    height: 320px;
   }
 
   @media (max-width: 820px) {
@@ -57,9 +63,25 @@
     .nav-second-container {
       justify-content: flex-start;
     }
+    .each-slide{
+      height: 280px;
+    }
+    @media (max-width: 670px){
+      .each-slide{
+        height: 200px;
+      }
+    }
+    @media (max-width: 520px){
+        .each-slide{
+          height: 145px;
+        }
+    }
     @media (max-width: 400px) {
       .nav-link-container {
         flex-direction: column;
+      }
+      .each-slide{
+        height: 190px;
       }
     }
   }

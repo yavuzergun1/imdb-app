@@ -17,8 +17,7 @@ function Home() {
     <div className="home-main-container">
       <Navbar />
       <Header/>
-      <h2>Most Popular Films</h2>
-      <div> <Slider/></div>
+      <Slider/>
      
     </div>
   );

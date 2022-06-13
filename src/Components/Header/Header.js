@@ -61,8 +61,9 @@ function Header() {
           
           <Link className="header-search-button" to="/searchresult">
             <button  onClick={() => setTitle(form)}>
-              Search
+              <p>Search</p>
               <img src={require("../../Assets/arrow-right 1.png")} />
+              
             </button>
           </Link>
         </form>

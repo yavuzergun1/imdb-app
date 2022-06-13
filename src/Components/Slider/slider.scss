@@ -1,22 +1,22 @@
-.slide-container{
+.slide-container {
+  margin-top: 80px;
+  padding: 0px 20px;
+  height: auto;
   width: 100%;
-  height: 100vh;
-  padding: 10px;
-
+}
+.react-slideshow-container{
+  
+  width: 100%;  // height: 100vh;
 }
 .slide{
- height: auto;
- width: 100%;
- background-repeat: no-repeat;
- background-size: cover;
+  height: auto;
+}
+.each-slide {
+  padding:0px 10px;
+  
 }
 .each-slide > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 400px;
   background-size: contain;
-  height: 65vh;
+  background-repeat: no-repeat;
 }
-
-
-
