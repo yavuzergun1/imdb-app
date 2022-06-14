@@ -8,7 +8,7 @@ function SearchPanel() {
   const [form, setForm] = useState();
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="search-main">
       <div className="header-search-container">
         <form
           className="header-form"

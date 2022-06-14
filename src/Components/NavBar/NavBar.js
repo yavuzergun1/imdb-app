@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./navBar.scss";
 import { UseData } from "../../Context/Context";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
