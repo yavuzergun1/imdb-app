@@ -43,7 +43,7 @@ function Search() {
           <input
             className="nav-input"
             placeholder="Enter movie name here"
-            onChange={(e) => setForm(e.target.value)}
+            onChange={(e) => {e.target.value && setForm(e.target.value) }}
           />
 
           <Link className="nav-search-img" to="/searchresult">

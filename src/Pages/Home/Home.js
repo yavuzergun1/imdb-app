@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.scss";
-import { Link } from "react-router-dom";
 import Navbar from "../../Components/NavBar/NavBar";
 import { UseData } from "../../Context/Context";
 import Slider from "../../Components/Slider/Slider";
@@ -16,9 +15,8 @@ function Home() {
   return (
     <div className="home-main-container">
       <Navbar />
-      <Header/>
-      <Slider/>
-     
+      <Header />
+      <Slider />
     </div>
   );
 }

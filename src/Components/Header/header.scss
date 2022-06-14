@@ -83,7 +83,8 @@
     background: #f3f3f3;
     border-radius: 8px;
     border: none;
-    
+    -webkit-appearance: none;
+    -moz-appearance: none;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -94,6 +95,10 @@
   }
   .header-movies {
     @extend .header-year;
+  }
+  .button-chevron{
+    position: relative;
+    right: 20px;
   }
   .header-text-container {
     position: relative;

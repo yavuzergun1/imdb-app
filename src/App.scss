@@ -1,7 +1,6 @@
 @import "./Components/Slider/slider.scss";
 @import "./Components/NavBar/navBar.scss";
 @import "./Components/Header/header.scss";
-@import "./Components/Slider/slider.scss";
 
 * {
   box-sizing: border-box;
@@ -46,11 +45,20 @@
     height: 45px;
     font-size: 16px;
   }
+  .button-chevron{
+    position: relative;
+    right: 15px;
+    top: 2px;
+  }
   .header-text-container {
     .header-input {
       height: 45px;
       font-size: 16px;
     }
+  }
+  .header-search-img {
+    bottom: 11px;
+    right: 20px;
   }
   .header-search-button {
     button {
@@ -114,6 +122,11 @@
       font-size: 13px;
       font-weight: 300;
     }
+    .button-chevron{
+      right: 15px;
+      top: 2px;
+      width: 12px;
+    }
     .header-text-container {
       .header-input {
         height: 35px;
@@ -151,77 +164,80 @@
         .each-slide > div {
           height: 200px;
         }
+        .header-search-container {
+          height: 180px;
+          width: 60%;
+          left: 20%;
+          top: 750px;
+          padding: 0px, 15px;
+        }
+        .header-form {
+          height: 150px;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .header-select {
+          width: 80%;
+          justify-content: space-between;
+        }
+        .header-text-container {
+          width: 80%;
+        }
+        .header-search-button {
+          width: 80%;
 
-        
-          .header-search-container {
-            height: 150px;
-            top: 770px;
-            padding: 0px, 15px;
+          button {
+            justify-content: center;
           }
-          .header-form {
-            height: 150px;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
+          &:hover {
+            transform: scale(1.1);
           }
-          .header-select {
-            width: 80%;
-            justify-content: space-between;
+        }
+
+        @media (max-width: 520px) {
+          .each-slide > div {
+            height: 145px;
           }
-          .header-text-container {
-            width: 80%;
-          }
-          .header-search-button {
-            width: 80%;
-            button {
+
+          @media (max-width: 400px) {
+            .nav-header-main {
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+              height: 160px;
+            }
+            .nav-link-container {
+              flex-direction: column;
+            }
+            .nav-second-container {
               justify-content: center;
             }
-          }
-
-          @media (max-width: 520px) {
-            .each-slide > div {
-              height: 145px;
-            }
-
-            @media (max-width: 400px) {
-              .nav-header-main {
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                height: 160px;
-              }
-              .nav-link-container {
-                flex-direction: column;
-              }
-              .nav-second-container {
-                justify-content: center;
-              }
-              .header-main-container {
+            .header-main-container {
+              height: 500px;
+              .header-pic {
                 height: 500px;
-                .header-pic {
-                  height: 500px;
-                }
               }
-              .header-circle {
-                bottom: 470px;
-              }
-              .header-topic {
-                top: 235px;
-                line-height: 45px;
-              }
-              .header-detail {
-                top: 390px;
-              }
-              .header-search-container {
-                top: 580px;
-              }
-              .each-slide > div {
-                height: 100px;
-              }
+            }
+            .header-circle {
+              bottom: 470px;
+            }
+            .header-topic {
+              top: 235px;
+              line-height: 45px;
+            }
+            .header-detail {
+              top: 390px;
+            }
+            .header-search-container {
+              top: 580px;
+            }
+            .each-slide > div {
+              height: 100px;
             }
           }
         }
       }
     }
   }
-
+}
