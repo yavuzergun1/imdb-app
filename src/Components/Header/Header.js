@@ -1,6 +1,4 @@
 import React from "react";
-import SearchPanel from "../SearchPanel/SearchPanel";
-
 function Header() {
   return (
     <header className="header-main-container">
@@ -23,8 +21,6 @@ function Header() {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris
       </p>
-<SearchPanel/>
-     
     </header>
   );
 }

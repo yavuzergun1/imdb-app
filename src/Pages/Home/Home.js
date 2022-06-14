@@ -4,7 +4,7 @@ import Navbar from "../../Components/NavBar/NavBar";
 import { UseData } from "../../Context/Context";
 import Slider from "../../Components/Slider/Slider";
 import Header from "../../Components/Header/Header";
-
+import SearchPanel from "../../Components/SearchPanel/SearchPanel";
 function Home() {
   const { data } = UseData();
   // console.log(data);
@@ -16,6 +16,7 @@ function Home() {
     <div className="home-main-container">
       <Navbar />
       <Header />
+      <SearchPanel/>
       <Slider />
     </div>
   );
