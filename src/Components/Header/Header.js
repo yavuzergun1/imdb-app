@@ -40,8 +40,8 @@ function Header() {
             navigate("/searchresult");
           }}
         >
-          {/* YEAR */}
-          <SelectYear />
+         <div className="header-select">
+         <SelectYear />
           {/* TYPE */}
           <select className="header-movies" onChange={(e) => setType(e.target.value)}>
             <option>Type</option>
@@ -49,6 +49,8 @@ function Header() {
             <option value="series">Series</option>
             <option value="episode">Episode</option>
           </select>
+         </div>
+         
           {/* SEARCH */}
           <div className="header-text-container">
           <input
