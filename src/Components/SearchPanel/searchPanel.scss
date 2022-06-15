@@ -74,6 +74,7 @@
     width: 20px;
     height: 20px;
     right: 10px;
+    top: 25px;
     // transform: translate(-35px);
   }
 }
@@ -91,7 +92,9 @@
     box-shadow: 0px 7px 20px rgba(141, 40, 173, 0.15);
     border-radius: 8px;
     border: none;
-
+&:active{
+  transform: scale(.9);
+}
     p {
       text-align: left;
       font-family: "Poppins";

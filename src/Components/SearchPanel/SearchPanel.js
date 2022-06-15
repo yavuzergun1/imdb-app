@@ -48,7 +48,9 @@ function SearchPanel() {
               placeholder="Enter movie name here"
               onChange={(e) => e.target.value && setForm(e.target.value)}
             />{" "}
-            <img src={require("../../Assets/search.png")} alt="" />
+             <Link className="" to="/searchresult"> 
+            <img className="header-search-icon" src={require("../../Assets/search.png")} alt="" />
+            </Link>
           </div>
 
           <Link className="header-search-button" to="/searchresult">
