@@ -6,6 +6,7 @@ import SelectYear from "./SelectYear";
 function SearchPanel() {
   const { setTitle, setType } = UseData();
   const [form, setForm] = useState();
+  const [selected, setSelected]= useState();
   const navigate = useNavigate();
   return (
     <div className="search-main">
@@ -26,7 +27,9 @@ function SearchPanel() {
             />
             <select
               className="header-movies"
-              onChange={(e) => setType(e.target.value)}
+              onChange={(e) => setSelected(e.target.value)}
+              onClick={(e) => setType(selected)}
+
             >
               <option>Type</option>
               <option value="movie">Movie</option>
