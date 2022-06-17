@@ -1,8 +1,7 @@
 import React from "react";
-import "../../App.scss";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-
+import "./slider.scss";
 const properties = {
   duration: 4000,
   transitionDuration: 2000,

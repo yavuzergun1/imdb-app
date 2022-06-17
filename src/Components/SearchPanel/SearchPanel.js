@@ -3,6 +3,7 @@ import { UseData } from "../../Context/Context";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SelectYear from "./SelectYear";
+import "./searchPanel.scss"
 function SearchPanel() {
   const { setTitle, setType } = UseData();
   const [form, setForm] = useState();
@@ -22,7 +23,7 @@ function SearchPanel() {
           <div className="header-select">
             <SelectYear />
             <img
-              className="button-chevron"
+              className="button-chevron-y"
               src={require("../../Assets/chevron.png")}
             />
             <select
@@ -37,7 +38,7 @@ function SearchPanel() {
               <option value="episode">Episode</option>
             </select>
             <img
-              className="button-chevron"
+              className="button-chevron-m"
               src={require("../../Assets/chevron.png")}
             />
           </div>
@@ -64,5 +65,8 @@ function SearchPanel() {
     </div>
   );
 }
+
+
+
 
 export default SearchPanel;

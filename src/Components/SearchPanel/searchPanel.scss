@@ -1,4 +1,4 @@
-.search-main{
+.search-main {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -46,10 +46,13 @@
 .header-movies {
   @extend .header-year;
 }
-.button-chevron {
+.button-chevron-y {
   position: relative;
   right: 20px;
   pointer-events: none;
+}
+.button-chevron-m {
+ @extend .button-chevron-y
 }
 .header-text-container {
   position: relative;
@@ -92,9 +95,12 @@
     box-shadow: 0px 7px 20px rgba(141, 40, 173, 0.15);
     border-radius: 8px;
     border: none;
-&:active{
-  transform: scale(.9);
-}
+    &:active {
+      transform: scale(0.9);
+    }
+    // &:hover {
+    //   transform: scale(1.1);
+    // }
     p {
       text-align: left;
       font-family: "Poppins";
@@ -103,6 +109,146 @@
       font-size: 20px;
       line-height: 30px;
       color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  header-search-container {
+    height: 90px;
+    top: 770px;
+  }
+
+  .header-year {
+    height: 45px;
+    font-size: 16px;
+  }
+  .button-chevron-y {
+    position: relative;
+    right: 15px;
+    top: 2px;
+  }
+  .header-text-container {
+    .header-input {
+      height: 45px;
+      font-size: 16px;
+    }
+    img {
+      top: 15px;
+    }
+  }
+
+  .header-search-img {
+    bottom: 11px;
+    right: 20px;
+  }
+  .header-search-button {
+    button {
+      height: 45px;
+      p {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @media (max-width: 820px) {
+    .header-search-container {
+      height: 70px;
+      top: 815px;
+    }
+
+    .header-year {
+      height: 35px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+    .button-chevron-y {
+      right: 15px;
+      top: 2px;
+      width: 12px;
+    }
+    .header-text-container {
+      .header-input {
+        height: 35px;
+        font-size: 13px;
+      }
+      img {
+        width: 15px;
+        height: 15px;
+        right: 5px;
+        top: 10px;
+      }
+    }
+    .header-search-button {
+      button {
+        height: 35px;
+        p {
+          font-size: 15px;
+          font-weight: 500;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-year {
+        font-size: 12px;
+        font-weight: 200;
+      }
+
+      @media (max-width: 670px) {
+        .header-search-container {
+          height: 190px;
+          width: 60%;
+          left: 20%;
+          top: 750px;
+          padding: 0px, 15px;
+        }
+        .header-form {
+          height: 150px;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .header-select {
+          width: 80%;
+          justify-content: space-between;
+    
+        }
+        .header-text-container {
+          width: 80%;
+        }
+        .header-movies{
+          transform: translate(10px);
+        }
+        .button-chevron-y {
+          right: 20px;
+          top: 2px;
+          width: 12px;
+        }
+        .button-chevron-m{
+          right: 10px;
+        }
+        .header-search-button {
+          width: 80%;
+
+          button {
+            justify-content: space-evenly;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .header-search-container {
+            width: 70%;
+            top: 580px;
+          }
+     
+        }
+      }
     }
   }
 }
