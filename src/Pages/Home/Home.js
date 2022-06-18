@@ -9,9 +9,9 @@ function Home() {
   const { data } = UseData();
   // console.log(data);
 
-  if (!data) {
-    return <p>loading</p>;
-  }
+  // if (!data) {
+  //   return <p>loading</p>;
+  // }
   return (
     <div className="home-main-container">
       <Navbar />

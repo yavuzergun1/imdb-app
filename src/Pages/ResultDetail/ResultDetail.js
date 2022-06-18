@@ -11,7 +11,7 @@ function ResultDetail() {
 
 
   useEffect(() => {
-    setFilmId(data.Search[id].imdbID);
+    setFilmId(data[id].imdbID);
   }, []);
   console.log(filmDetail);
 

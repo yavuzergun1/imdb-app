@@ -8,7 +8,7 @@ function SearchResult() {
   const { data } = UseData();
   console.log(data);
 
-  if (!data.Search) {
+  if (!data) {
     return <p>Loading film data...</p>;
   }
 
@@ -18,21 +18,21 @@ function SearchResult() {
         <NavBar />
         <div className="sr-nav">
           <span className="sr-home">Home /</span>
-          <span className="sr-results"> Search Results</span>
+          <span className="sr-results"> Results</span>
         </div>
         <SearchPanel />
       </div>
       <section className="search-result">
         <div className="films-container">
-          {data.Search.map((film, index) => {
+          {data.map((film, index) => {
             return (
               <div className="sr-film" key={`/${index}`}>
                 <Link to={`/${index}`}>
                   <img src={film.Poster} alt="" />{" "}
                 </Link>
-                <div>{data.Search[index].imdbID}</div>
-                <div className="title">{data.Search[index].Title}</div>
-                <div className="title">{data.Search[index].imdbRating}</div>
+                <div>{data[index].imdbID}</div>
+                <div className="title">{data[index].Title}</div>
+                <div className="title">{data[index].imdbRating}</div>
                 <AddFavorites film={film} />
               </div>
             );

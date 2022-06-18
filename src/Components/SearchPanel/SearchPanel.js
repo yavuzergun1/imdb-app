@@ -3,21 +3,22 @@ import { UseData } from "../../Context/Context";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SelectYear from "./SelectYear";
-import "./searchPanel.scss"
+import "./searchPanel.scss";
 function SearchPanel() {
   const { setTitle, setType } = UseData();
   const [form, setForm] = useState();
-  const [selected, setSelected]= useState();
+  const [selected, setSelected] = useState();
   const navigate = useNavigate();
   return (
     <div className="search-main">
       <div className="header-search-container">
         <form
           className="header-form"
-          onSubmit={(e) => {
-            e.preventDefault();
+          onSubmit={() => {
             setTitle(form);
+            setType(selected);
             navigate("/searchresult");
+            // setForm("");
           }}
         >
           <div className="header-select">
@@ -29,8 +30,6 @@ function SearchPanel() {
             <select
               className="header-movies"
               onChange={(e) => setSelected(e.target.value)}
-              onClick={(e) => setType(selected)}
-
             >
               <option>Type</option>
               <option value="movie">Movie</option>
@@ -47,15 +46,28 @@ function SearchPanel() {
             <input
               className="header-input"
               placeholder="Enter movie name here"
-              onChange={(e) => e.target.value && setForm(e.target.value)}
+              onChange={(e) => setForm(e.target.value)}
+              // onClick={(e) => setForm(e.target.value)}
             />{" "}
-             <Link className="" to="/searchresult"> 
-            <img className="header-search-icon" src={require("../../Assets/search.png")} alt="" />
+            <Link className="" to="/searchresult">
+              <img
+                className="header-search-icon"
+                src={require("../../Assets/search.png")}
+                alt=""
+                onClick={() => setTitle(form)}
+              />
             </Link>
           </div>
 
           <Link className="header-search-button" to="/searchresult">
-            <button onClick={() => setTitle(form)}>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                setTitle(form);
+                setType(selected);
+                navigate("/searchresult");
+              }}
+            >
               <p>Search</p>
               <img src={require("../../Assets/arrow-right 1.png")} />
             </button>
@@ -65,8 +77,5 @@ function SearchPanel() {
     </div>
   );
 }
-
-
-
 
 export default SearchPanel;
