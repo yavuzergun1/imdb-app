@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SelectYear from "./SelectYear";
 import "./searchPanel.scss";
 function SearchPanel() {
-  const { setTitle, setType } = UseData();
+  const { setTitle, setType, selectYear, setYear } = UseData();
   const [form, setForm] = useState();
   const [selected, setSelected] = useState();
   const navigate = useNavigate();
@@ -17,6 +17,7 @@ function SearchPanel() {
           onSubmit={() => {
             setTitle(form);
             setType(selected);
+            setYear(selectYear);
             navigate("/searchresult");
             // setForm("");
           }}
@@ -47,23 +48,27 @@ function SearchPanel() {
               className="header-input"
               placeholder="Enter movie name here"
               onChange={(e) => setForm(e.target.value)}
-              // onClick={(e) => setForm(e.target.value)}
             />{" "}
             <Link className="" to="/searchresult">
               <img
                 className="header-search-icon"
                 src={require("../../Assets/search.png")}
                 alt=""
-                onClick={() => setTitle(form)}
+                onClick={() => {
+                  setTitle(form);
+            setType(selected);
+            setYear(selectYear);
+            navigate("/searchresult");
+                }}
               />
             </Link>
           </div>
 
           <Link className="header-search-button" to="/searchresult">
             <button
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 setTitle(form);
+                setYear(selectYear);
                 setType(selected);
                 navigate("/searchresult");
               }}

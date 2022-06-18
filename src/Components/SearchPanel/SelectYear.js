@@ -2,12 +2,12 @@ import React from "react";
 import { UseData } from "../../Context/Context";
 
 function SelectYear() {
-  const { year, setYear } = UseData();
+  const { selectYear, setSelectYear } = UseData();
   return (
   
       <select
         className="header-year"
-        onChange={(e) => setYear(e.target.value)}
+        onChange={(e) => setSelectYear(e.target.value)}
       >
         <option>Year</option>
         <option value="1900">1900</option>
