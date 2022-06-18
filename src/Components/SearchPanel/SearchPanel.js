@@ -31,8 +31,9 @@ function SearchPanel() {
             <select
               className="header-movies"
               onChange={(e) => setSelected(e.target.value)}
+              
             >
-              <option>Type</option>
+              <option value={"movie"}>Type</option>
               <option value="movie">Movie</option>
               <option value="series">Series</option>
               <option value="episode">Episode</option>

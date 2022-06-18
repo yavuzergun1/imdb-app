@@ -21,7 +21,7 @@ function Data() {
         }
         setData(data.Search);
       } catch (err) {
-        alert("Your film name is undefined. Please write a valid film name");
+        alert(" Film Could Not Found");
       }
     }
 
@@ -29,12 +29,12 @@ function Data() {
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&s=${title}`
       );
-      if (data.Response === "False" && data.Search[0].Title === "Undefined") {
+      if (data.Response === "False") {
         throw new SyntaxError();
       }
       !type && setData(data.Search);
     } catch (err) {
-      alert("Your film name is undefined. Please write a valid film name");
+      alert("Film Could Not Found");
     }
 
     if (filmId) {

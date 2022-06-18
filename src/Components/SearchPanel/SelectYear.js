@@ -7,9 +7,11 @@ function SelectYear() {
   
       <select
         className="header-year"
-        onChange={(e) => setSelectYear(e.target.value)}
+        onChange={(e) => setSelectYear(e.target.value)
+        }
+        defaultValue={undefined}
       >
-        <option>Year</option>
+        <option value={undefined}>Year</option>
         <option value="1900">1900</option>
         <option value="1901">1901</option>
         <option value="1902">1902</option>

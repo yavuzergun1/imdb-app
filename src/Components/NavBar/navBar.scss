@@ -2,10 +2,10 @@
 
 .nav-header-main {
   height: 128px;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: 46px 0px 14px 75px;
+  // padding: 46px 0px 14px 75px;
 }
 
 .nav-first-container {
@@ -100,7 +100,8 @@
     height: 150px;
     flex-direction: column;
     justify-content: space-around;
-    align-items: baseline;
+    align-items:flex-start;
+    padding-left: 50px;
   }
   .nav-first-container {
     width: 100;

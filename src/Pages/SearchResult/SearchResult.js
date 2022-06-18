@@ -13,14 +13,23 @@ function SearchResult() {
   }
 
   return (
-    <div>
+    <div className="sr-main">
       <div className="sr-nav-container">
         <NavBar />
         <div className="sr-nav">
-          <span className="sr-home">Home /</span>
+          <div className="half-container">
+            <div className="in-container">
+            <span className="sr-home">Home /</span>
           <span className="sr-results"> Results</span>
+            </div>
+        
+          </div>
+          
         </div>
+        <div className="sr-search-main">
         <SearchPanel />
+        </div>
+        
       </div>
       <section className="search-result">
         <div className="films-container">
