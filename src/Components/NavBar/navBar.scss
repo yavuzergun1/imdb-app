@@ -98,15 +98,18 @@
 @media (max-width: 1050px) {
   .nav-header-main {
     height: 150px;
+    width: 90%;
     flex-direction: column;
     justify-content: space-around;
     align-items:flex-start;
     padding-left: 50px;
+
   }
   .nav-first-container {
-    width: 100;
+    width: 50%;
     justify-content: flex-start;
     align-items: flex-start;
+
   }
   .nav-input {
     width: 280px;
@@ -116,6 +119,7 @@
     }
   }
   .nav-second-container {
+    width: 30%;
     justify-content: flex-start;
   }
   .nav-search-img {
@@ -124,6 +128,7 @@
       height: 20px;
     }
   }
+
   @media (max-width: 520px) {
     .nav-header-main {
       width: 100%;

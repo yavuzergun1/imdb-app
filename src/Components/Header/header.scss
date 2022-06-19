@@ -29,7 +29,7 @@
   font-size: 65px;
   line-height: 84px;
   left: 15%;
-  top: 315px;
+  top: 255px;
   color: #ffffff;
   .welcome {
     font-weight: 500;
@@ -55,18 +55,16 @@
 }
 @media (max-width: 1050px) {
   .header-topic {
-    top: 340px;
+    top: 280px;
   }
-  .header-detail {
-    top: 550px;
-  }
+
 }
 @media (max-width: 820px) {
   .header-search-container {
     height: 70px;
     top: 815px;
   }
-
+ 
   .header-year {
     height: 35px;
     font-size: 13px;
@@ -101,6 +99,13 @@
       }
     }
   }
+  @media (max-width: 750px) {
+    .header-topic{
+      width: 400px;
+    }
+    .header-detail{
+      width: 400px;
+    }
   @media (max-width: 520px) {
     .header-topic {
       font-size: 50px;
@@ -126,4 +131,5 @@
       }
     }
   }
+}
 }

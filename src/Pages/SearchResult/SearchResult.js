@@ -1,5 +1,8 @@
+// YORUM SATIRINDA OLAN KODLAR IMDB VERİSİ ALMAK İÇİN YAZILDI. VERİ ALINAMIYOR.
+
 import { Link } from "react-router-dom";
 import AddFavorites from "../../Components/Checkboxes/SRaddFavorites";
+// import ImdbID from "../../Components/ImdbID/ImdbID";
 import NavBar from "../../Components/NavBar/NavBar";
 import SearchPanel from "../../Components/SearchPanel/SearchPanel";
 import { UseData } from "../../Context/Context";
@@ -15,21 +18,20 @@ function SearchResult() {
   return (
     <div className="sr-main">
       <div className="sr-nav-container">
-        <NavBar />
+        <div className="sr-nav-main">
+          <NavBar />
+        </div>
         <div className="sr-nav">
           <div className="half-container">
             <div className="in-container">
-            <span className="sr-home">Home /</span>
-          <span className="sr-results"> Results</span>
+              <span className="sr-home">Home /</span>
+              <span className="sr-results"> Results</span>
             </div>
-        
           </div>
-          
         </div>
         <div className="sr-search-main">
-        <SearchPanel />
+          <SearchPanel />
         </div>
-        
       </div>
       <section className="search-result">
         <div className="films-container">
@@ -48,6 +50,7 @@ function SearchResult() {
           })}
         </div>
       </section>
+      {/* <ImdbID/> */}
     </div>
   );
 }

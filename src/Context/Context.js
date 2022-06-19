@@ -1,5 +1,8 @@
 import { createContext, useContext, useState } from "react";
 
+// YORUM SATIRINDA OLAN KODLAR IMDB VERİSİ ALMAK İÇİN YAZILDI. VERİ ALINAMIYOR.
+
+
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
@@ -12,6 +15,8 @@ export const DataProvider = ({ children }) => {
   const [year, setYear]= useState();
   const [type, setType]= useState();
   const [selectYear, setSelectYear]= useState();
+  // const [searchId, setSearchId] = useState([]);
+  // const [rating, setRating]= useState([]);
   const values = {
     data,
     setData,
@@ -31,8 +36,11 @@ export const DataProvider = ({ children }) => {
     setSelectYear,
     type,
     setType,
+    // searchId,
+    // setSearchId,
+    // rating,
+    // setRating,
   };
-
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;
 };
 
