@@ -40,6 +40,7 @@ function SearchResult() {
               <div className="sr-film" key={`/${index}`}>
                 <Link to={`/${index}`}>
                   <img src={film.Poster} alt="" />{" "}
+                  <div className="sr-biography">Biography</div>
                 </Link>
                 <div>{data[index].imdbID}</div>
                 <div className="title">{data[index].Title}</div>

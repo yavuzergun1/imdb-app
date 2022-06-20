@@ -1,7 +1,7 @@
 import React from "react";
 import { UseData } from "../../Context/Context";
 import { useState } from "react";
-
+import "./checkboxes.scss";
 function RDaddFavorites() {
   const { favorites, setFavorites, filmId, filmDetail } = UseData();
   const [checked, setChecked] = useState(true);
@@ -24,12 +24,14 @@ function RDaddFavorites() {
   };
   
   return (
-    <div>
-      <input
-        type="checkbox"
-        onChange={checked ? addFavorite : deleteFavorite}
-      />
-    </div>
+    <div className="checkbox-main">
+    <input
+      id="heart"
+      type="checkbox"
+      onChange={!checked ? addFavorite : deleteFavorite}
+    />
+    <label className="label-heart" ><span>❤</span> </label>
+  </div>
   );
 }
 
