@@ -1,0 +1,62 @@
+.sd-results {
+  height: 850px;
+  position: relative;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  img {
+    width: 383px;
+    height: 449.55px;
+    border-radius: 15px;
+  }
+  .sd-biography {
+    position: absolute;
+    top: 395px;
+    left: 10px;
+    width: 30%;
+    height: 46px;
+    background: #f5c518;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+  .sd-plot {
+    text-align: justify;
+  }
+  .imdb {
+    width: 49px;
+    height: 26px;
+    border-radius: 0px;
+  }
+  .imdb-container {
+    display: flex;
+    align-items: center;
+    p {
+      margin-left: 10px;
+    }
+  }
+  .sd-year {
+    color: #f5c518;
+  }
+  .sd-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .sd-plot {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}

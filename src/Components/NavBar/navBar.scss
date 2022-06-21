@@ -63,14 +63,14 @@
   justify-content: center;
 }
 .nav-form {
+  width: 450px;
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: flex-start;
 }
 .nav-input {
   pointer-events: all;
-  width: 403px;
+  width: 450px;
   height: 68px;
   background: #f3f3f3;
   border: none;
@@ -98,29 +98,26 @@
 @media (max-width: 1050px) {
   .nav-header-main {
     height: 150px;
-    width: 90%;
+    width: 100%;
     flex-direction: column;
     justify-content: space-around;
-    align-items:flex-start;
-    padding-left: 50px;
-
+    align-items: center;
   }
   .nav-first-container {
-    width: 50%;
-    justify-content: flex-start;
-    align-items: flex-start;
-
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   .nav-input {
-    width: 280px;
+    width: 450px;
     height: 40px;
     &::placeholder {
       font-size: 15px;
     }
   }
   .nav-second-container {
-    width: 30%;
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: center;
   }
   .nav-search-img {
     img {
@@ -128,7 +125,21 @@
       height: 20px;
     }
   }
+  @media (max-width: 670px) {
+    .nav-header-main {
+      height: 140px;
+      padding-left: 0px;
+    }
+    // .nav-first-container {
+    //   // width: 100%;
 
+    // }
+    .nav-second-container {
+      // width: 100%;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
   @media (max-width: 520px) {
     .nav-header-main {
       width: 100%;
@@ -152,14 +163,27 @@
     .nav-second-container {
       width: 100%;
       padding-left: 0px;
+    }
+    .nav-form {
       justify-content: center;
     }
-    @media (max-width: 520px) {
-      .nav-input {
-        width: 220px;
+    .nav-input {
+      width: 280px;
+      
+    }
+    .nav-search-img{
+      right: 90px;
+    }
+    @media (max-width: 450px) {
+      .nav-form{
+        position: relative;
+
       }
-      .nav-search-img{
-        right: 10px;
+      .nav-input {
+        width: 250px;
+      }
+      .nav-search-img {
+        right: 80px;
       }
     }
   }

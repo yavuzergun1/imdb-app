@@ -79,6 +79,7 @@
 }
 .films-container {
   width: 90%;
+  max-width: 1570px;
   display: flex;
   transform: translate(-20px);
   justify-content: center;
@@ -90,40 +91,9 @@
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  height: 550px;
-
-  img {
-    width: 383px;
-    height: 449.55px;
-    border-radius: 15px;
-    margin-right: 10px;
-  }
-  .title {
-    width: 350px;
-  }
-
-  a {
-    text-decoration: none;
-    // text-align: center;
-  }
-  .sr-biography {
-    position: absolute;
-    bottom: 110px;
-    left: 10px;
-    width: 30%;
-    height: 46px;
-    background: #f5c518;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-  }
+  height: 850px;
+  width: 383px;
+  margin-right: 40px;
 }
 
 @media (max-width: 1050px) {
@@ -150,6 +120,9 @@
   }
 }
 @media (max-width: 670px) {
+  .sr-nav-main {
+    height: 170px;
+  }
   .sr-nav-container {
     height: 440px;
     align-items: center;
@@ -162,7 +135,8 @@
     transform: translate(0px);
   }
   .search-result {
-    transform: translate(0px);
+    transform: translate(-8px);
+    justify-content: end;
   }
   @media (max-width: 520px) {
     .sr-nav-container {
@@ -176,6 +150,7 @@
     }
     .search-result {
       width: 100%;
+      transform: translate(0px);
     }
   }
 }

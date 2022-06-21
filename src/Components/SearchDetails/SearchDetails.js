@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import SRaddFavorites from "../Checkboxes/SRaddFavorites";
-
+import "./searchDetails.scss"
 function ImdbID({ film, index }) {
   const [searchFilmDetail, setSearchFilmDetail] = useState();
 
@@ -24,22 +24,28 @@ function ImdbID({ film, index }) {
   }, [film]);
 
   if (!searchFilmDetail) {
-    return <p>...</p>;
+    return <p>Film loading...</p>;
   }
 
   return (
-    <div>
-      <img src={searchFilmDetail.Poster} alt="" />{" "}
-      <Link to={`/${index}`}>
-        <div className="sr-biography">
-          <p>Biography</p>{" "}
+    <div className="sd-results">
+      <div className="sd-results">
+        <img src={searchFilmDetail.Poster} alt="" />{" "}
+        <Link to={`/${index}`}>
+          <div className="sd-biography">
+            <p>Biography</p>{" "}
+          </div>
+        </Link>
+        <SRaddFavorites film={film} />
+        <div className="imdb-container">
+        <img className="imdb" src={require("../../Assets/IMDB-icon.png")} alt="" />
+        <p className="sd-rating">{searchFilmDetail.imdbRating}</p>
         </div>
-      </Link>
-      <SRaddFavorites film={film} />
-      <p>{searchFilmDetail.imdbRating}</p>
-      <p> {searchFilmDetail.Year}</p>
-      <p>{searchFilmDetail.Title} </p>
-      <p>{searchFilmDetail.Plot} </p>
+        
+        <p className="sd-year"> {searchFilmDetail.Year}</p>
+        <p className="sd-title">{searchFilmDetail.Title} </p>
+        <p className="sd-plot">{searchFilmDetail.Plot} </p>
+      </div>
     </div>
   );
 }
