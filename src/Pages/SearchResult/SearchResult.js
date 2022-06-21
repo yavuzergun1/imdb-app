@@ -2,13 +2,13 @@
 
 import { Link } from "react-router-dom";
 import AddFavorites from "../../Components/Checkboxes/SRaddFavorites";
-// import ImdbID from "../../Components/ImdbID/ImdbID";
+import ImdbID from "../../Components/ImdbID/ImdbID";
 import NavBar from "../../Components/NavBar/NavBar";
 import SearchPanel from "../../Components/SearchPanel/SearchPanel";
 import { UseData } from "../../Context/Context";
 import "./searchResult.scss";
 function SearchResult() {
-  const { data } = UseData();
+  const { data, rating } = UseData();
   console.log(data);
 
   if (!data) {
@@ -38,14 +38,15 @@ function SearchResult() {
           {data.map((film, index) => {
             return (
               <div className="sr-film" key={`/${index}`}>
-                <Link to={`/${index}`}>
                   <img src={film.Poster} alt="" />{" "}
-                  <div className="sr-biography">Biography</div>
+                <Link to={`/${index}`}>
+                  <div className="sr-biography"><p>Biography</p> </div>
                 </Link>
-                <div>{data[index].imdbID}</div>
-                <div className="title">{data[index].Title}</div>
-                <div className="title">{data[index].imdbRating}</div>
                 <AddFavorites film={film} />
+                <ImdbID film={film} />
+                <div>{data[index].imdbID}</div> {/* BURADAKİ imdbID ile tekrar api verisi alıp diğer bilgileri çekmem gerekiyor. */}
+                <div className="title">{film.Title}</div>
+                <div className="title">{film.imdbRating}</div> {/* Api burada imdbRating bilgisini sağlamıyor */}
               </div>
             );
           })}

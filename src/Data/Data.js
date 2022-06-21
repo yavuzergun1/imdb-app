@@ -7,10 +7,6 @@ import { UseData } from "../Context/Context";
 
 function Data() {
   const { data, setData, title, filmId, setFilmDetail, year, type, searchId, /* rating, setRating  */} = UseData();
-  console.log(type);
-  console.log(title);
-  console.log(year);
-  console.log(searchId);
 
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;

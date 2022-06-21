@@ -16,7 +16,7 @@ export const DataProvider = ({ children }) => {
   const [type, setType]= useState();
   const [selectYear, setSelectYear]= useState();
   // const [searchId, setSearchId] = useState([]);
-  // const [rating, setRating]= useState([]);
+  // const [rating, setRating]= useState();
   const values = {
     data,
     setData,
