@@ -4,6 +4,7 @@ import { UseData } from "../../Context/Context";
 import { useEffect } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
 import AddFavorites from "../../Components/Checkboxes/RDaddFavorites";
+import "./resultDetail.scss";
 
 function ResultDetail() {
   const { data, filmId, setFilmId, filmDetail } = UseData();
@@ -18,16 +19,37 @@ function ResultDetail() {
     return <p>Loading Film Data...</p>;
   }
   return (
-    <div>
+    <div className="rd-main">
       <NavBar />
-      <div>
-        {" "}
-        {filmId}
-        <img src={filmDetail.Poster} alt="" />
+      <div className="sr-nav">
+        <div className="half-container">
+          <div className="in-container">
+            <span className="sr-home">Home /</span>
+            <span className="sr-results"> {filmDetail.Title} </span>
+          </div>
+        </div>
       </div>
 
-      <AddFavorites />
-      <p>{filmDetail.Plot} </p>
+      <div className="detail-container">
+        {" "}
+        <div className="rd-poster" >
+          <img className="rd-poster" src={filmDetail.Poster} alt="" />
+        </div>
+        <div className="detail">
+          <p>Rating</p>
+          <div className="rd-first">
+            <img src={require("../../Assets/IMDB-icon.png")} alt="" />
+            <p>{filmDetail.imdbRating} </p>
+            <div className="add-favs">
+            <AddFavorites />
+
+            </div>
+          </div>
+          <div className="rd-second">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat tempora commodi repellat odit minima repudiandae et dolores debitis aut maiores labore sint accusamus delectus ab saepe quam autem similique optio nihil, enim esse itaque ipsum laborum. Voluptatibus quod, corrupti laboriosam at soluta, architecto non a maiores facilis sed dolores reiciendis.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -10,8 +10,15 @@ function FavDeleteFavorites({ favorite }) {
     setFavorites(favorites.filter((item) => item.imdbID !== favorite.imdbID));
   };
   return (
-    <div>
-      <input type="checkbox" onChange={deleteFavorite} checked={checked} />
+    <div className="checkbox-main">
+      <input
+        id="heart"
+        type="checkbox"
+        onChange={deleteFavorite}
+        checked={checked}
+      />
+            <label className="label-heart" ><span>❤</span> </label>
+
     </div>
   );
 }

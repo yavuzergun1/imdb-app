@@ -1,4 +1,4 @@
-.sd-results {
+.results {
   height: 850px;
   position: relative;
   font-family: "Poppins";
@@ -12,7 +12,7 @@
     height: 449.55px;
     border-radius: 15px;
   }
-  .sd-biography {
+  .biography {
     position: absolute;
     top: 395px;
     left: 10px;
@@ -30,7 +30,7 @@
     line-height: 24px;
     color: #000000;
   }
-  .sd-plot {
+  .plot {
     text-align: justify;
   }
   .imdb {
@@ -45,15 +45,15 @@
       margin-left: 10px;
     }
   }
-  .sd-year {
+  .year {
     color: #f5c518;
   }
-  .sd-title {
+  .title {
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
   }
-  .sd-plot {
+  .plot {
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;

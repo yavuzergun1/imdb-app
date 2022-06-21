@@ -28,23 +28,23 @@ function ImdbID({ film, index }) {
   }
 
   return (
-    <div className="sd-results">
-      <div className="sd-results">
+    <div className="results">
+      <div className="results">
         <img src={searchFilmDetail.Poster} alt="" />{" "}
         <Link to={`/${index}`}>
-          <div className="sd-biography">
+          <div className="biography">
             <p>Biography</p>{" "}
           </div>
         </Link>
-        <SRaddFavorites film={film} />
+        <SRaddFavorites film={searchFilmDetail} />
         <div className="imdb-container">
         <img className="imdb" src={require("../../Assets/IMDB-icon.png")} alt="" />
-        <p className="sd-rating">{searchFilmDetail.imdbRating}</p>
+        <p className="rating">{searchFilmDetail.imdbRating}</p>
         </div>
         
-        <p className="sd-year"> {searchFilmDetail.Year}</p>
-        <p className="sd-title">{searchFilmDetail.Title} </p>
-        <p className="sd-plot">{searchFilmDetail.Plot} </p>
+        <p className="year"> {searchFilmDetail.Year}</p>
+        <p className="title">{searchFilmDetail.Title} </p>
+        <p className="plot">{searchFilmDetail.Plot} </p>
       </div>
     </div>
   );
