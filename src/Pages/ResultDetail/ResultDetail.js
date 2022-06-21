@@ -9,7 +9,6 @@ function ResultDetail() {
   const { data, filmId, setFilmId, filmDetail } = UseData();
   const { id } = useParams();
 
-
   useEffect(() => {
     setFilmId(data[id].imdbID);
   }, []);
