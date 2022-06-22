@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { UseData } from "../../Context/Context";
 import { useEffect } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
-import RDAddFavorites from "../../Components/Checkboxes/RDaddFavorites";
+import RDaddFavorite from "../../Components/Checkboxes/RDaddFavorite";
 import "./resultDetail.scss";
 
 function ResultDetail() {
@@ -29,7 +29,6 @@ function ResultDetail() {
           </div>
         </div>
       </div>
-
       <div className="detail-container">
         {" "}
         <div className="rd-poster">
@@ -42,9 +41,7 @@ function ResultDetail() {
               <img src={require("../../Assets/IMDB-icon.png")} alt="" />
               <p>{filmDetail.imdbRating} </p>
             </div>
-            
-              <RDAddFavorites />
-            
+            <RDaddFavorite />
           </div>
           <div className="rd-second">
             <p className="rd-sum">

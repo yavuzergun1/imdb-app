@@ -2,7 +2,7 @@ import React from "react";
 import { UseData } from "../../Context/Context";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import FavDeleteFavorites from "../../Components/Checkboxes/FavDeleteFavorites";
+import DeleteFavorite from "../../Components/Checkboxes/DeleteFavorite";
 import NavBar from "../../Components/NavBar/NavBar";
 import "./favorites.scss";
 function Favorites() {
@@ -21,44 +21,44 @@ function Favorites() {
   return (
     <div>
       <div className="sr-nav-main fav-nav">
-          <NavBar />
-        </div>
-      <div className="sr-nav">
-          <div className="half-container">
-            <div className="in-container">
-              <span className="sr-home">Home /</span>
-              <span className="sr-results"> Favorites</span>
-            </div>
-          </div>
-        </div>
-      <section className="fav-main search-result">
-      <div className="favs-container films-container">
-        {localFavorites.map((favorite, index) => {
-          return (
-            <div className="fav-film results" key={index}>
-              <img src={favorite.Poster} alt="" />
-              <Link to={`/${index}`}>
-          <div className="biography">
-            <p>Biography</p>{" "}
-          </div>
-        </Link>
-              <FavDeleteFavorites favorite={favorite} />
-              <div className="imdb-container">
-                <img
-                  className="imdb"
-                  src={require("../../Assets/IMDB-icon.png")}
-                  alt=""
-                />
-                <p className="rating">{favorite.imdbRating}</p>
-              </div>
-
-              <p className="year"> {favorite.Year}</p>
-              <p className="title">{favorite.Title} </p>
-              <p className="plot">{favorite.Plot} </p>
-            </div>
-          );
-        })}
+        <NavBar />
       </div>
+      <div className="sr-nav">
+        <div className="half-container">
+          <div className="in-container">
+            <span className="sr-home">Home /</span>
+            <span className="sr-results"> Favorites</span>
+          </div>
+        </div>
+      </div>
+      <section className="fav-main search-result">
+        <div className="favs-container films-container">
+          {localFavorites.map((favorite, index) => {
+            return (
+              <div className="fav-film results" key={index}>
+                <img src={favorite.Poster} alt="" />
+                <Link to={`/${index}`}>
+                  <div className="biography">
+                    <p>Biography</p>{" "}
+                  </div>
+                </Link>
+                <DeleteFavorite favorite={favorite} />
+                <div className="imdb-container">
+                  <img
+                    className="imdb"
+                    src={require("../../Assets/IMDB-icon.png")}
+                    alt=""
+                  />
+                  <p className="rating">{favorite.imdbRating}</p>
+                </div>
+
+                <p className="year"> {favorite.Year}</p>
+                <p className="title">{favorite.Title} </p>
+                <p className="plot">{favorite.Plot} </p>
+              </div>
+            );
+          })}
+        </div>
       </section>
     </div>
   );

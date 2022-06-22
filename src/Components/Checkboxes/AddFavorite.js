@@ -16,19 +16,12 @@ function SRaddFavorites({ film }) {
     }
   };
 
-  const deleteFavorite = () => {
-    setChecked(!checked);
-    setFavorites(favorites.filter((item) => item.imdbID !== film.imdbID));
-  };
-
   return (
     <div className="checkbox-main">
-      <input
-        id="heart"
-        type="checkbox"
-        onChange={!checked ? addFavorite : deleteFavorite}
-      />
-      <label className="label-heart" ><span>❤</span> </label>
+      <input id="heart" type="checkbox" onChange={addFavorite} />
+      <label className="label-heart">
+        <span>❤</span>{" "}
+      </label>
     </div>
   );
 }

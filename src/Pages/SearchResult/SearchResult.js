@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import AddFavorites from "../../Components/Checkboxes/SRaddFavorites";
+import AddFavorites from "../../Components/Checkboxes/AddFavorite";
 import SearchDetails from "../../Components/SearchDetails/SearchDetails";
 import NavBar from "../../Components/NavBar/NavBar";
 import SearchPanel from "../../Components/SearchPanel/SearchPanel";

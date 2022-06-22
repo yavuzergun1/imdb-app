@@ -2,8 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import SRaddFavorites from "../Checkboxes/SRaddFavorites";
-import FavDeleteFavorites from "../Checkboxes/FavDeleteFavorites";
+import AddFavorite from "../Checkboxes/AddFavorite";
+import DeleteFavorite from "../Checkboxes/DeleteFavorite";
 import "./searchDetails.scss"
 function ImdbID({ film, index, isFavorite }) {
   const [searchFilmDetail, setSearchFilmDetail] = useState();
@@ -26,9 +26,9 @@ function ImdbID({ film, index, isFavorite }) {
     return <p>Film loading...</p>;
   }
 
-  let heart= <SRaddFavorites film={searchFilmDetail} />
+  let check= <AddFavorite film={searchFilmDetail} />
   if (isFavorite){
-    heart= <FavDeleteFavorites favorite={searchFilmDetail} />
+    check= <DeleteFavorite favorite={searchFilmDetail} />
   }
   return (
     <div className="results">
@@ -40,7 +40,7 @@ function ImdbID({ film, index, isFavorite }) {
           </div>
         </Link>
         {/* <SRaddFavorites film={searchFilmDetail} /> */}
-        {heart}
+        {check}
         <div className="imdb-container">
         <img className="imdb" src={require("../../Assets/IMDB-icon.png")} alt="" />
         <p className="rating">{searchFilmDetail.imdbRating}</p>
