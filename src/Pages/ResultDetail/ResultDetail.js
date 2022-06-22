@@ -20,7 +20,7 @@ function ResultDetail() {
   }
   return (
     <div className="rd-main">
-      <NavBar />
+      <div className="sr-navbar"> <NavBar /> </div>
       <div className="sr-nav">
         <div className="half-container">
           <div className="in-container">
@@ -30,7 +30,6 @@ function ResultDetail() {
         </div>
       </div>
       <div className="detail-container">
-        {" "}
         <div className="rd-poster">
           <img className="rd-poster" src={filmDetail.Poster} alt="" />
         </div>
