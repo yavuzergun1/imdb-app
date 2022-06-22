@@ -13,14 +13,12 @@ function ImdbID({ film, index }) {
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&i=${film.imdbID}`
       );
-      console.log(data);
       setSearchFilmDetail(data);
     } catch (err) {}
   };
 
   useEffect(() => {
     film && getData();
-    console.log(searchFilmDetail);
   }, [film]);
 
   if (!searchFilmDetail) {

@@ -1,14 +1,14 @@
 import React from "react";
 import { UseData } from "../../Context/Context";
 import { useState } from "react";
-import "./checkboxes.scss";
+import "./rdAddFavorites.scss";
 function RDaddFavorites() {
   const { favorites, setFavorites, filmId, filmDetail } = UseData();
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
   // console.log(favorites);
 
   const addFavorite = () => {
-    setChecked(!checked);
+    setChecked(checked);
     if (
       favorites.map((favorite) => favorite.imdbID).includes(filmId) !== true
     ) {
@@ -22,16 +22,18 @@ function RDaddFavorites() {
     setChecked(!checked);
     setFavorites(favorites.filter((item) => item.imdbID !== filmDetail.imdbID));
   };
-  
+
   return (
-    <div className="checkbox-main">
-    <input
-      id="heart"
-      type="checkbox"
-      onChange={!checked ? addFavorite : deleteFavorite}
-    />
-    <label className="label-heart" ><span>❤</span> </label>
-  </div>
+    <div className={checked ? "unchecked-favs" : "checked-favs"}>
+        <input
+          id="rdAdd-heart"
+          type="checkbox"
+          onChange={checked ? addFavorite : deleteFavorite}
+        />
+        <label className="rdAdd-label-heart">❤</label>
+        <p className="add"> Add to Favorites </p>
+        <p className="added"> Added to Favorites </p>
+      </div>
   );
 }
 
