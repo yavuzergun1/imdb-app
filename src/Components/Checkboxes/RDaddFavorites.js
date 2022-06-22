@@ -4,11 +4,12 @@ import { useState } from "react";
 import "./rdAddFavorites.scss";
 function RDaddFavorites() {
   const { favorites, setFavorites, filmId, filmDetail } = UseData();
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   // console.log(favorites);
 
   const addFavorite = () => {
-    setChecked(checked);
+    setChecked(!checked);
+    console.log("add çalıştı");
     if (
       favorites.map((favorite) => favorite.imdbID).includes(filmId) !== true
     ) {
@@ -20,6 +21,8 @@ function RDaddFavorites() {
 
   const deleteFavorite = () => {
     setChecked(!checked);
+    console.log("delete çalıştı");
+
     setFavorites(favorites.filter((item) => item.imdbID !== filmDetail.imdbID));
   };
 
@@ -28,7 +31,7 @@ function RDaddFavorites() {
         <input
           id="rdAdd-heart"
           type="checkbox"
-          onChange={checked ? addFavorite : deleteFavorite}
+          onChange={!checked ? deleteFavorite : addFavorite}
         />
         <label className="rdAdd-label-heart">❤</label>
         <p className="add"> Add to Favorites </p>
