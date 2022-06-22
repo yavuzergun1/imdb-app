@@ -6,7 +6,7 @@ import SearchPanel from "../../Components/SearchPanel/SearchPanel";
 import { UseData } from "../../Context/Context";
 import "./searchResult.scss";
 function SearchResult() {
-  const { data } = UseData();
+  const { data, favorites } = UseData();
   // console.log(data);
 
   if (!data) {
@@ -34,9 +34,15 @@ function SearchResult() {
       <section className="search-result">
         <div className="films-container">
           {data.map((film, index) => {
+            let isFavorite = false;
+            favorites.forEach((favorite)=>{
+              if(favorite.imdbID == film.imdbID){
+                isFavorite = true;
+              }
+            })
             return (
               <div className="sr-film" key={`/${index}`}>
-                <SearchDetails film={film} index={index} />
+                <SearchDetails film={film} index={index} isFavorite={isFavorite} />
               </div>
             );
           })}

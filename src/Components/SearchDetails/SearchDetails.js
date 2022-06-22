@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import SRaddFavorites from "../Checkboxes/SRaddFavorites";
+import FavDeleteFavorites from "../Checkboxes/FavDeleteFavorites";
 import "./searchDetails.scss"
-function ImdbID({ film, index }) {
+function ImdbID({ film, index, isFavorite }) {
   const [searchFilmDetail, setSearchFilmDetail] = useState();
 
   const getData = async () => {
@@ -25,6 +26,10 @@ function ImdbID({ film, index }) {
     return <p>Film loading...</p>;
   }
 
+  let heart= <SRaddFavorites film={searchFilmDetail} />
+  if (isFavorite){
+    heart= <FavDeleteFavorites favorite={searchFilmDetail} />
+  }
   return (
     <div className="results">
       <div className="results">
@@ -34,7 +39,8 @@ function ImdbID({ film, index }) {
             <p>Biography</p>{" "}
           </div>
         </Link>
-        <SRaddFavorites film={searchFilmDetail} />
+        {/* <SRaddFavorites film={searchFilmDetail} /> */}
+        {heart}
         <div className="imdb-container">
         <img className="imdb" src={require("../../Assets/IMDB-icon.png")} alt="" />
         <p className="rating">{searchFilmDetail.imdbRating}</p>

@@ -3,10 +3,10 @@ import axios from "axios";
 import { useEffect } from "react";
 import { UseData } from "../Context/Context";
 
-// YORUM SATIRINDA OLAN KODLAR IMDB VERİSİ ALMAK İÇİN YAZILDI. VERİ ALINAMIYOR.
+
 
 function Data() {
-  const { data, setData, title, filmId, setFilmDetail, year, type, searchId, /* rating, setRating  */} = UseData();
+  const { data, setData, title, filmId, setFilmDetail, year, type} = UseData();
 
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;
@@ -37,14 +37,7 @@ function Data() {
       alert("Film Could Not Found");
     }
 
-      // searchId.map(async(id)=>{
-      //   try {
-      //     const { data } = await axios.get(
-      //       `https://www.omdbapi.com/?apikey=${key}&i=${id}`
-      //     );
-      //     // setRating([...rating, data.imdbRating]);
-      //   } catch (err) {}
-      // })
+
     
     
 
@@ -61,7 +54,6 @@ function Data() {
   useEffect(() => {
     getData();
   }, [title, filmId, type, year]);
-// console.log(rating);
   return <div></div>;
 }
 

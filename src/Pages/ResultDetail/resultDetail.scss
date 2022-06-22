@@ -37,15 +37,14 @@
           width: 49px;
           height: 26px;
         }
-        p{
-            margin-left: 15px;
-            font-size: 18px;
-            font-weight: 600;
-            font-family: "Poppins";
-            line-height: 27px;
+        p {
+          margin-left: 15px;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: "Poppins";
+          line-height: 27px;
         }
       }
-      
     }
     .rd-second {
       p {
@@ -60,4 +59,8 @@
       }
     }
   }
+}
+
+@media (max-width: 670px) {
+
 }
