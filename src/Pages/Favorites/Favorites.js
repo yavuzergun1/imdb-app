@@ -6,22 +6,13 @@ import DeleteFavorite from "../../Components/Checkboxes/DeleteFavorite";
 import NavBar from "../../Components/NavBar/NavBar";
 import "./favorites.scss";
 function Favorites() {
-  const { favorites, filmId, setFilmId } = UseData();
+  const { favorites } = UseData();
   const [localFavorites, setLocalFavorites] = useState([]);
   console.log(favorites);
   useEffect(() => {
     localStorage.setItem("localFavorites", JSON.stringify(favorites));
     setLocalFavorites(JSON.parse(localStorage.getItem("localFavorites")));
   }, [favorites]);
-
-  // useEffect(() => {
-  //   setFilmId(localFavorites.imdbID);
-  // }, [favorites]);
-  // console.log(filmId);
-
-  // const getImdbId= ()=>{
-  //   console.log(favorite.imdbID);
-  // }
 
   if (!favorites) {
     <p>Loading</p>;
