@@ -16,9 +16,7 @@ function SearchResult() {
   return (
     <div className="sr-main">
       <div className="sr-nav-container">
-        <div className="sr-nav-main">
-          <NavBar />
-        </div>
+        <NavBar />
         <div className="sr-nav">
           <div className="half-container">
             <div className="in-container">
@@ -35,14 +33,18 @@ function SearchResult() {
         <div className="films-container">
           {data.map((film, index) => {
             let isFavorite = false;
-            favorites.forEach((favorite)=>{
-              if(favorite.imdbID == film.imdbID){
+            favorites.forEach((favorite) => {
+              if (favorite.imdbID == film.imdbID) {
                 isFavorite = true;
               }
-            })
+            });
             return (
               <div className="sr-film" key={`/${index}`}>
-                <SearchDetails film={film} index={index} isFavorite={isFavorite} />
+                <SearchDetails
+                  film={film}
+                  index={index}
+                  isFavorite={isFavorite}
+                />
               </div>
             );
           })}

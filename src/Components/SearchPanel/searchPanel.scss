@@ -5,10 +5,9 @@
   transform: translate(0px, -50%);
 }
 .header-search-container {
-  width: 78%;
+  width: calc(900px + 10%);
   height: 129px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   background: #ffffff;
@@ -112,12 +111,13 @@
     }
   }
 }
-
-@media (max-width: 970px) {
-  header-search-container {
-    height: 90px;
+@media (max-width: 1050px) {
+.header-search-container{
+  width: 80%;
+  height: 90px;
     top: 770px;
-  }
+}
+
 
   .header-year {
     height: 45px;

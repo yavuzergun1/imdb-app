@@ -8,8 +8,8 @@ function Search() {
   const [form, setForm] = useState();
   const navigate = useNavigate();
   return (
-    <nav className="nav-header-main">
-      <div className="nav-first-container">
+    <nav className="nav-main">
+      {/* <div className="nav-first-container"> */}
         <div className="nav-link-container">
           <div className="logo">
             <img
@@ -28,9 +28,9 @@ function Search() {
             </Link>
           </div>
         </div>
-      </div>
+      {/* </div> */}
 
-      <div className="nav-second-container">
+      {/* <div className="nav-second-container"> */}
         <form
           className="nav-form"
           onSubmit={(e) => {
@@ -52,7 +52,7 @@ function Search() {
             />
           </Link>
         </form>
-      </div>
+      {/* </div> */}
     </nav>
   );
 }

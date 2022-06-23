@@ -45,13 +45,15 @@
   position: absolute;
   width: 584px;
   height: 80px;
+  top: 510px;
+  left: 15%;
+  font-family: 'Poppins';
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin: 0px;
-  top: 510px;
-  left: 15%;
-  color: rgba(255, 255, 255, 0.8);
+  
+  color: rgba(255, 255, 255, 0.8)
 }
 @media (max-width: 1050px) {
   .header-topic {

@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-.nav-header-main {
+.nav-main {
   height: 128px;
   width: 100%;
   max-width: 1570px;
   display: flex;
-margin: auto;  // padding: 46px 0px 14px 75px;
+  justify-content: space-around;
+  margin: auto; // padding: 46px 0px 14px 75px;
 }
 
 .nav-first-container {
@@ -96,7 +97,7 @@ margin: auto;  // padding: 46px 0px 14px 75px;
 }
 
 @media (max-width: 1050px) {
-  .nav-header-main {
+  .nav-main {
     height: 200px;
     width: 100%;
     flex-direction: column;
@@ -126,7 +127,7 @@ margin: auto;  // padding: 46px 0px 14px 75px;
     }
   }
   @media (max-width: 670px) {
-    .nav-header-main {
+    .nav-main {
       height: 140px;
       padding-left: 0px;
     }
@@ -141,7 +142,7 @@ margin: auto;  // padding: 46px 0px 14px 75px;
     }
   }
   @media (max-width: 520px) {
-    .nav-header-main {
+    .nav-main {
       width: 100%;
       flex-direction: column;
       justify-content: space-evenly;
@@ -169,15 +170,13 @@ margin: auto;  // padding: 46px 0px 14px 75px;
     }
     .nav-input {
       width: 280px;
-      
     }
-    .nav-search-img{
+    .nav-search-img {
       right: 90px;
     }
     @media (max-width: 450px) {
-      .nav-form{
+      .nav-form {
         position: relative;
-
       }
       .nav-input {
         width: 250px;
