@@ -1,4 +1,4 @@
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { UseData } from "../../Context/Context";
 import { useEffect } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
@@ -10,13 +10,13 @@ function ResultDetail() {
   const { data, setFilmId, filmDetail, favorites } = UseData();
   const { id, imdbid } = useParams();
   useEffect(() => {
-  id && setFilmId(data[id].imdbID);
-  }, [id]);
+    id && setFilmId(data[id].imdbID);
+  }, []);
   console.log(filmDetail);
 
-  useEffect(()=>{
-imdbid && setFilmId(imdbid)
-  }, [imdbid])
+  useEffect(() => {
+    imdbid && setFilmId(imdbid);
+  }, []);
 
   if (!filmDetail) {
     return <p>Loading Film Data...</p>;
@@ -29,11 +29,11 @@ imdbid && setFilmId(imdbid)
   });
   let addFavorite = <RDaddFavorite filmDetail={filmDetail} />;
   if (isFavorite) {
-    addFavorite = <RDdeleteFavorite filmDetail={filmDetail}/>;
+    addFavorite = <RDdeleteFavorite filmDetail={filmDetail} />;
   }
   return (
     <div className="rd-main">
-      <div className="sr-navbar">
+      <div className="rd-navbar">
         {" "}
         <NavBar />{" "}
       </div>

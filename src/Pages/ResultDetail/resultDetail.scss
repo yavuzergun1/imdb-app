@@ -63,7 +63,7 @@
 
 @media (max-width: 670px) {
 
-.sr-navbar{
+.rd-navbar{
   height: 170px;
 }
 .detail-container{
@@ -79,5 +79,10 @@
 }
 .imdb-cont{
   justify-content: space-between;
+}
+@media (max-width: 570px) {
+  .rd-navbar{
+    height: 190px;
+  }
 }
 }
