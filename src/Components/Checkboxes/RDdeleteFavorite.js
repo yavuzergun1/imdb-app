@@ -21,7 +21,8 @@ function RDdeleteFavorite({filmDetail}) {
         onChange={deleteFavorite}
         checked={checked}
       />
-            <label className="label-heart" ><span>❤</span> </label>
+            <label className="rdAdd-label-heart" ><span>❤</span> </label>
+            <p className="added"> Added to Favorites </p>
 
     </div>
   )

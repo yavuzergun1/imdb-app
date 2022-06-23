@@ -28,7 +28,6 @@ function RDaddFavorites() {
         />
         <label className="rdAdd-label-heart">❤</label>
         <p className="add"> Add to Favorites </p>
-        <p className="added"> Added to Favorites </p>
       </div>
   );
 }
