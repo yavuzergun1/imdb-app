@@ -9,6 +9,7 @@ function SearchResult() {
   const { data, favorites } = UseData();
   // console.log(data);
 
+
   if (!data) {
     return <p>Loading film data...</p>;
   }

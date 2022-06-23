@@ -19,19 +19,12 @@ function RDaddFavorites() {
     }
   };
 
-  const deleteFavorite = () => {
-    setChecked(!checked);
-    console.log("delete çalıştı");
-
-    setFavorites(favorites.filter((item) => item.imdbID !== filmDetail.imdbID));
-  };
-
   return (
-    <div className={checked ? "unchecked-favs" : "checked-favs"}>
+    <div className= "unchecked-favs">
         <input
           id="rdAdd-heart"
           type="checkbox"
-          onChange={!checked ? deleteFavorite : addFavorite}
+          onChange={ addFavorite}
         />
         <label className="rdAdd-label-heart">❤</label>
         <p className="add"> Add to Favorites </p>

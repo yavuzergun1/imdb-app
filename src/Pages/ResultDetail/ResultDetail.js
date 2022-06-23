@@ -5,9 +5,11 @@ import { useEffect } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
 import RDaddFavorite from "../../Components/Checkboxes/RDaddFavorite";
 import "./resultDetail.scss";
+// import FavDeleteFavorites from "../../Components/Checkboxes/DeleteFavorite";
+import RDdeleteFavorite from "../../Components/Checkboxes/RDdeleteFavorite";
 
 function ResultDetail() {
-  const { data, filmId, setFilmId, filmDetail } = UseData();
+  const { data, filmId, setFilmId, filmDetail, favorites } = UseData();
   const { id } = useParams();
 
   useEffect(() => {
@@ -15,12 +17,25 @@ function ResultDetail() {
   }, []);
   console.log(filmDetail);
 
+  let isFavorite = false;
+  favorites.forEach((favorite) => {
+    if (favorite.imdbID == filmDetail.imdbID) {
+      isFavorite = true;
+    }
+  });
+  let heart = <RDaddFavorite filmDetail={filmDetail} />;
+  if (isFavorite) {
+    heart = <RDdeleteFavorite filmDetail={filmDetail}/>;
+  }
   if (!filmDetail) {
     return <p>Loading Film Data...</p>;
   }
   return (
     <div className="rd-main">
-      <div className="sr-navbar"> <NavBar /> </div>
+      <div className="sr-navbar">
+        {" "}
+        <NavBar />{" "}
+      </div>
       <div className="sr-nav">
         <div className="half-container">
           <div className="in-container">
@@ -40,7 +55,8 @@ function ResultDetail() {
               <img src={require("../../Assets/IMDB-icon.png")} alt="" />
               <p>{filmDetail.imdbRating} </p>
             </div>
-            <RDaddFavorite />
+            {/* <RDaddFavorite /> */}
+            {heart}
           </div>
           <div className="rd-second">
             <p className="rd-sum">
