@@ -57,7 +57,7 @@
 }
 @media (max-width: 1050px) {
   .header-topic {
-    top: 280px;
+    top: 330px;
   }
 }
 @media (max-width: 820px) {
@@ -107,6 +107,12 @@
     .header-detail {
       width: 400px;
     }
+    @media (max-width: 670px) {
+      .header-topic {
+       
+        top: 270px;
+       
+      }
     @media (max-width: 520px) {
       .header-topic {
         font-size: 50px;
@@ -135,4 +141,5 @@
       }
     }
   }
+}
 }
