@@ -39,8 +39,7 @@ function ImdbID({ film, index, isFavorite }) {
             <p>Biography</p>{" "}
           </div>
         </Link>
-        {/* <SRaddFavorites film={searchFilmDetail} /> */}
-        {check}
+         {check}
         <div className="imdb-container">
         <img className="imdb" src={require("../../Assets/IMDB-icon.png")} alt="" />
         <p className="rating">{searchFilmDetail.imdbRating}</p>

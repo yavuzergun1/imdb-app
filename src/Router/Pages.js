@@ -14,6 +14,7 @@ function Pages() {
         <Route path="SearchResult" element={<SearchResult />} />
         <Route path=":id" element={<ResultDetail />} />
         <Route path="Favorites" element={<Favorites />} />
+        <Route path="favorites/:imdbid" element={<ResultDetail />} />
       </Routes>
     </BrowserRouter>
   );

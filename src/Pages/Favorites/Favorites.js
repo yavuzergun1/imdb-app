@@ -6,7 +6,7 @@ import DeleteFavorite from "../../Components/Checkboxes/DeleteFavorite";
 import NavBar from "../../Components/NavBar/NavBar";
 import "./favorites.scss";
 function Favorites() {
-  const { favorites } = UseData();
+  const { favorites, filmId, setFilmId } = UseData();
   const [localFavorites, setLocalFavorites] = useState([]);
   console.log(favorites);
   useEffect(() => {
@@ -14,10 +14,18 @@ function Favorites() {
     setLocalFavorites(JSON.parse(localStorage.getItem("localFavorites")));
   }, [favorites]);
 
+  // useEffect(() => {
+  //   setFilmId(localFavorites.imdbID);
+  // }, [favorites]);
+  // console.log(filmId);
+
+  // const getImdbId= ()=>{
+  //   console.log(favorite.imdbID);
+  // }
+
   if (!favorites) {
     <p>Loading</p>;
   }
-  console.log(localFavorites);
   return (
     <div>
       <div className="sr-nav-main fav-nav">
@@ -37,8 +45,9 @@ function Favorites() {
             return (
               <div className="fav-film results" key={index}>
                 <img src={favorite.Poster} alt="" />
-                <Link to={`/${index}`}>
-                  <div className="biography">
+                
+                <Link to={`./${favorite.imdbID}`}>
+                  <div className="biography" >
                     <p>Biography</p>{" "}
                   </div>
                 </Link>

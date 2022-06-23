@@ -10,13 +10,19 @@ import RDdeleteFavorite from "../../Components/Checkboxes/RDdeleteFavorite";
 
 function ResultDetail() {
   const { data, filmId, setFilmId, filmDetail, favorites } = UseData();
-  const { id } = useParams();
-
+  const { id, imdbid } = useParams();
   useEffect(() => {
-    setFilmId(data[id].imdbID);
+   id && setFilmId(data[id].imdbID);
   }, []);
   console.log(filmDetail);
 
+  useEffect(()=>{
+setFilmId(imdbid)
+  }, [])
+
+  if (!filmDetail) {
+    return <p>Loading Film Data...</p>;
+  }
   let isFavorite = false;
   favorites.forEach((favorite) => {
     if (favorite.imdbID == filmDetail.imdbID) {
@@ -26,9 +32,6 @@ function ResultDetail() {
   let heart = <RDaddFavorite filmDetail={filmDetail} />;
   if (isFavorite) {
     heart = <RDdeleteFavorite filmDetail={filmDetail}/>;
-  }
-  if (!filmDetail) {
-    return <p>Loading Film Data...</p>;
   }
   return (
     <div className="rd-main">
