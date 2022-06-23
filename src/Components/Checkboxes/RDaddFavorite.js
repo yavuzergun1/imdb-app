@@ -1,7 +1,7 @@
 import React from "react";
 import { UseData } from "../../Context/Context";
 import { useState } from "react";
-import "./rdAddFavorites.scss";
+import "./RDcheckboxes.scss";
 function RDaddFavorites() {
   const { favorites, setFavorites, filmId, filmDetail } = UseData();
   const [checked, setChecked] = useState(true);
