@@ -24,7 +24,7 @@ function RDaddFavorites() {
         <input
           id="rdAdd-heart"
           type="checkbox"
-          onChange={ addFavorite}
+          onChange={addFavorite}
         />
         <label className="rdAdd-label-heart">❤</label>
         <p className="add"> Add to Favorites </p>

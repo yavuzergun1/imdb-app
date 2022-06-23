@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { UseData } from "../../Context/Context";
-import "./rdAddFavorites.scss"
+import "./rdAddFavorites.scss";
   
 
 function RDdeleteFavorite({filmDetail}) {
@@ -16,12 +16,11 @@ function RDdeleteFavorite({filmDetail}) {
   return (
     <div className="checked-favs">
       <input
-        id="heart"
+        id="rdAdd-heart"
         type="checkbox"
         onChange={deleteFavorite}
-        checked={checked}
       />
-            <label className="rdAdd-label-heart" ><span>❤</span> </label>
+            <label className="rdDelete-label-heart" >❤</label>
             <p className="added"> Added to Favorites </p>
 
     </div>
