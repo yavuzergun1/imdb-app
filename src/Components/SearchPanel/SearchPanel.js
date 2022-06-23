@@ -31,7 +31,6 @@ function SearchPanel() {
             <select
               className="header-movies"
               onChange={(e) => setSelected(e.target.value)}
-              
             >
               <option value={"movie"}>Type</option>
               <option value="movie">Movie</option>
@@ -57,9 +56,9 @@ function SearchPanel() {
                 alt=""
                 onClick={() => {
                   setTitle(form);
-            setType(selected);
-            setYear(selectYear);
-            navigate("/searchresult");
+                  setType(selected);
+                  setYear(selectYear);
+                  navigate("/searchresult");
                 }}
               />
             </Link>

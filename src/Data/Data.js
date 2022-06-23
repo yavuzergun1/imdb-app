@@ -3,10 +3,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import { UseData } from "../Context/Context";
 
-
-
 function Data() {
-  const { data, setData, title, filmId, setFilmDetail, year, type} = UseData();
+  const { data, setData, title, filmId, setFilmDetail, year, type } = UseData();
 
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;
@@ -36,10 +34,6 @@ function Data() {
     } catch (err) {
       alert("Film Could Not Found");
     }
-
-
-    
-    
 
     if (filmId) {
       try {

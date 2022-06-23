@@ -51,7 +51,7 @@
   pointer-events: none;
 }
 .button-chevron-m {
- @extend .button-chevron-y
+  @extend .button-chevron-y;
 }
 .header-text-container {
   position: relative;
@@ -112,12 +112,11 @@
   }
 }
 @media (max-width: 1050px) {
-.header-search-container{
-  width: 80%;
-  height: 90px;
+  .header-search-container {
+    width: 80%;
+    height: 90px;
     top: 770px;
-}
-
+  }
 
   .header-year {
     height: 45px;
@@ -217,12 +216,11 @@
         .header-select {
           width: 80%;
           justify-content: space-between;
-    
         }
         .header-text-container {
           width: 80%;
         }
-        .header-movies{
+        .header-movies {
           transform: translate(10px);
         }
         .button-chevron-y {
@@ -230,7 +228,7 @@
           top: 2px;
           width: 12px;
         }
-        .button-chevron-m{
+        .button-chevron-m {
           right: 10px;
         }
         .header-search-button {
@@ -246,7 +244,6 @@
             width: 75%;
             top: 580px;
           }
-     
         }
       }
     }

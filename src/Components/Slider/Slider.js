@@ -18,7 +18,7 @@ const slideImages = [
     url: require("./../../Assets/braveheart.jpg"),
   },
   {
-    url:require("./../../Assets/avatar.png"),
+    url: require("./../../Assets/avatar.png"),
   },
   {
     url: require("./../../Assets/casablanca.jpg"),

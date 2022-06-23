@@ -7,7 +7,6 @@ import Favorites from "../Pages/Favorites/Favorites";
 
 function Pages() {
   return (
-
     <BrowserRouter basename="imdb-app">
       <Routes>
         <Route path="/" element={<Home />} />

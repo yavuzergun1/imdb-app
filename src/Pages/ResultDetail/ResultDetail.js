@@ -10,13 +10,13 @@ function ResultDetail() {
   const { data, setFilmId, filmDetail, favorites } = UseData();
   const { id, imdbid } = useParams();
   useEffect(() => {
-   id && setFilmId(data[id].imdbID);
-  }, []);
+  id && setFilmId(data[id].imdbID);
+  }, [id]);
   console.log(filmDetail);
 
   useEffect(()=>{
-setFilmId(imdbid)
-  }, [])
+imdbid && setFilmId(imdbid)
+  }, [imdbid])
 
   if (!filmDetail) {
     return <p>Loading Film Data...</p>;

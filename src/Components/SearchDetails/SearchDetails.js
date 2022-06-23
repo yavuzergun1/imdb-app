@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import AddFavorite from "../Checkboxes/AddFavorite";
 import DeleteFavorite from "../Checkboxes/DeleteFavorite";
-import "./searchDetails.scss"
+import "./searchDetails.scss";
 function ImdbID({ film, index, isFavorite }) {
   const [searchFilmDetail, setSearchFilmDetail] = useState();
 
@@ -26,9 +26,9 @@ function ImdbID({ film, index, isFavorite }) {
     return <p>Film loading...</p>;
   }
 
-  let check= <AddFavorite film={searchFilmDetail} />
-  if (isFavorite){
-    check= <DeleteFavorite favorite={searchFilmDetail} />
+  let check = <AddFavorite film={searchFilmDetail} />;
+  if (isFavorite) {
+    check = <DeleteFavorite favorite={searchFilmDetail} />;
   }
   return (
     <div className="results">
@@ -39,12 +39,15 @@ function ImdbID({ film, index, isFavorite }) {
             <p>Biography</p>{" "}
           </div>
         </Link>
-         {check}
+        {check}
         <div className="imdb-container">
-        <img className="imdb" src={require("../../Assets/IMDB-icon.png")} alt="" />
-        <p className="rating">{searchFilmDetail.imdbRating}</p>
+          <img
+            className="imdb"
+            src={require("../../Assets/IMDB-icon.png")}
+            alt=""
+          />
+          <p className="rating">{searchFilmDetail.imdbRating}</p>
         </div>
-        
         <p className="year"> {searchFilmDetail.Year}</p>
         <p className="title">{searchFilmDetail.Title} </p>
         <p className="plot">{searchFilmDetail.Plot} </p>

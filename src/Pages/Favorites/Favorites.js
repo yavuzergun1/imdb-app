@@ -45,9 +45,9 @@ function Favorites() {
             return (
               <div className="fav-film results" key={index}>
                 <img src={favorite.Poster} alt="" />
-                
+
                 <Link to={`./${favorite.imdbID}`}>
-                  <div className="biography" >
+                  <div className="biography">
                     <p>Biography</p>{" "}
                   </div>
                 </Link>
