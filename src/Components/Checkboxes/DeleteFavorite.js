@@ -17,8 +17,9 @@ function FavDeleteFavorites({ favorite }) {
         onChange={deleteFavorite}
         checked={checked}
       />
-            <label className="label-heart" ><span>❤</span> </label>
-
+      <label className="label-heart">
+        <span>❤</span>{" "}
+      </label>
     </div>
   );
 }

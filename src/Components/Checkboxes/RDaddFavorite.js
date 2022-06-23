@@ -5,7 +5,6 @@ import "./RDcheckboxes.scss";
 function RDaddFavorites() {
   const { favorites, setFavorites, filmId, filmDetail } = UseData();
   const [checked, setChecked] = useState(true);
-  // console.log(favorites);
 
   const addFavorite = () => {
     setChecked(!checked);
@@ -20,15 +19,11 @@ function RDaddFavorites() {
   };
 
   return (
-    <div className= "unchecked-favs">
-        <input
-          id="rdAdd-heart"
-          type="checkbox"
-          onChange={addFavorite}
-        />
-        <label className="rdAdd-label-heart">❤</label>
-        <p className="add"> Add to Favorites </p>
-      </div>
+    <div className="unchecked-favs">
+      <input id="rdAdd-heart" type="checkbox" onChange={addFavorite} />
+      <label className="rdAdd-label-heart">❤</label>
+      <p className="add"> Add to Favorites </p>
+    </div>
   );
 }
 

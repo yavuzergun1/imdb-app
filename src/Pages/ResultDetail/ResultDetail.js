@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import { UseData } from "../../Context/Context";
 import { useEffect } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
 import RDaddFavorite from "../../Components/Checkboxes/RDaddFavorite";
 import "./resultDetail.scss";
-// import FavDeleteFavorites from "../../Components/Checkboxes/DeleteFavorite";
 import RDdeleteFavorite from "../../Components/Checkboxes/RDdeleteFavorite";
 
 function ResultDetail() {
-  const { data, filmId, setFilmId, filmDetail, favorites } = UseData();
+  const { data, setFilmId, filmDetail, favorites } = UseData();
   const { id, imdbid } = useParams();
   useEffect(() => {
    id && setFilmId(data[id].imdbID);
@@ -29,9 +27,9 @@ setFilmId(imdbid)
       isFavorite = true;
     }
   });
-  let heart = <RDaddFavorite filmDetail={filmDetail} />;
+  let addFavorite = <RDaddFavorite filmDetail={filmDetail} />;
   if (isFavorite) {
-    heart = <RDdeleteFavorite filmDetail={filmDetail}/>;
+    addFavorite = <RDdeleteFavorite filmDetail={filmDetail}/>;
   }
   return (
     <div className="rd-main">
@@ -58,8 +56,7 @@ setFilmId(imdbid)
               <img src={require("../../Assets/IMDB-icon.png")} alt="" />
               <p>{filmDetail.imdbRating} </p>
             </div>
-            {/* <RDaddFavorite /> */}
-            {heart}
+            {addFavorite}
           </div>
           <div className="rd-second">
             <p className="rd-sum">

@@ -5,7 +5,6 @@ import "./RDcheckboxes.scss";
 
 function RDdeleteFavorite({ filmDetail }) {
   const { favorites, setFavorites } = UseData();
-  const [checked, setChecked] = useState();
 
   const deleteFavorite = () => {
     setFavorites(favorites.filter((item) => item.imdbID !== filmDetail.imdbID));
