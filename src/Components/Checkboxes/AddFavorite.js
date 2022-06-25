@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { UseData } from "../../Context/Context";
-import {FaRegHeart} from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import "./checkboxes.scss";
 
 function SRaddFavorites({ film }) {
