@@ -9,12 +9,12 @@ function Data() {
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;
 
-    if (type !== undefined || year !== undefined) {
+    if (type !== undefined && year !== undefined ) {
       try {
         const { data } = await axios.get(
           `https://www.omdbapi.com/?apikey=${key}&s=${title}&y=${year}&type=${type}`
         );
-        if (data.Response === "False") {
+        if (data.Response === "False" ) {
           throw new SyntaxError();
         }
         setData(data.Search);
@@ -22,12 +22,12 @@ function Data() {
         alert(" Film Could Not Found");
       }
     }
-
+  
     try {
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&s=${title}`
       );
-      if (data.Response === "False") {
+      if (data.Response === "False" /* || data[0].Title === "Undefined" */ ) {
         throw new SyntaxError();
       }
       !type && setData(data.Search);

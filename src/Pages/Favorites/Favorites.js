@@ -8,7 +8,7 @@ import "./favorites.scss";
 function Favorites() {
   const { favorites } = UseData();
   const [localFavorites, setLocalFavorites] = useState([]);
-  console.log(favorites);
+  // console.log(favorites);
   useEffect(() => {
     localStorage.setItem("localFavorites", JSON.stringify(favorites));
     setLocalFavorites(JSON.parse(localStorage.getItem("localFavorites")));

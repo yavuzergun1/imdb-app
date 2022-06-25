@@ -17,7 +17,7 @@ function SRaddFavorites({ film }) {
       }
     }
   };
-  console.log(favorites);
+  // console.log(favorites);
   return (
     <div className="checkbox-main">
       <input id="heart" type="checkbox" onChange={addFavorite} />
