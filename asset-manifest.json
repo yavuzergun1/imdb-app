@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/imdb-app/static/css/main.45990696.css",
+    "main.css": "/imdb-app/static/css/main.d705144d.css",
     "main.js": "/imdb-app/static/js/main.209d68b9.js",
     "static/js/787.3d4fd0dc.chunk.js": "/imdb-app/static/js/787.3d4fd0dc.chunk.js",
     "static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.png": "/imdb-app/static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.8e2bfbb7dccc509d6971.png",
@@ -13,12 +13,12 @@
     "static/media/forrestgump.jpg": "/imdb-app/static/media/forrestgump.a8b297b16bc0aa838e3d.jpg",
     "static/media/pianist.jpg": "/imdb-app/static/media/pianist.f49447317cd4d07bebc5.jpg",
     "index.html": "/imdb-app/index.html",
-    "main.45990696.css.map": "/imdb-app/static/css/main.45990696.css.map",
+    "main.d705144d.css.map": "/imdb-app/static/css/main.d705144d.css.map",
     "main.209d68b9.js.map": "/imdb-app/static/js/main.209d68b9.js.map",
     "787.3d4fd0dc.chunk.js.map": "/imdb-app/static/js/787.3d4fd0dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45990696.css",
+    "static/css/main.d705144d.css",
     "static/js/main.209d68b9.js"
   ]
 }
