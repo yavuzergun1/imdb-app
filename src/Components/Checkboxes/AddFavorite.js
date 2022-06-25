@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { UseData } from "../../Context/Context";
+import {FaRegHeart} from "react-icons/fa";
 import "./checkboxes.scss";
 
 function SRaddFavorites({ film }) {
@@ -21,7 +22,7 @@ function SRaddFavorites({ film }) {
     <div className="checkbox-main">
       <input id="heart" type="checkbox" onChange={addFavorite} />
       <label className="label-heart">
-        <span>❤</span>{" "}
+        <FaRegHeart />
       </label>
     </div>
   );

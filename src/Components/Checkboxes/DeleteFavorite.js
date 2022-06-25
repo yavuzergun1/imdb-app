@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { UseData } from "../../Context/Context";
+import {FaHeart} from "react-icons/fa";
 
 function FavDeleteFavorites({ favorite }) {
   const { favorites, setFavorites } = UseData();
@@ -18,7 +19,10 @@ function FavDeleteFavorites({ favorite }) {
         checked={checked}
       />
       <label className="label-heart">
-        <span>❤</span>{" "}
+        <span>
+          {" "}
+          <FaHeart />
+        </span>{" "}
       </label>
     </div>
   );

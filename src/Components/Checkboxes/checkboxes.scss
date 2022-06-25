@@ -21,17 +21,22 @@
   top: -60px;
   width: 41px;
   height: 41px;
-  color: #ffff;
+  color: #f5c518;
   text-shadow: -1px 0px 0 #f5c518, 0px -1px 0 #f5c518, 0px 1px 0 #f5c518,
     0px 1px 0 #f5c518;
   background-color: #fff;
   border-radius: 20px;
+  border-color: #f5c518;
   cursor: pointer;
   font-size: 1.2em;
   transition: color 0.2s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.label-heart:hover {
+  color: grey;
 }
 
 .label-heart::selection {
@@ -46,7 +51,7 @@
 
 #heart:checked + label {
   color: #f5c518;
-  will-change: font-size;
+  // will-change: font-size;
   animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
 }
 

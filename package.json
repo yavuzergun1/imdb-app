@@ -17,6 +17,7 @@
     "react-dates": "^21.8.0",
     "react-dom": "^18.1.0",
     "react-dropdown-date": "^2.2.7",
+    "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-single-year-picker": "^1.1.4",
