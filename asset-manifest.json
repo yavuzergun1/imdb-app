@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/imdb-app/static/css/main.a343128b.css",
-    "main.js": "/imdb-app/static/js/main.28e9a435.js",
+    "main.css": "/imdb-app/static/css/main.97d42077.css",
+    "main.js": "/imdb-app/static/js/main.9bbe9c47.js",
     "static/js/787.3d4fd0dc.chunk.js": "/imdb-app/static/js/787.3d4fd0dc.chunk.js",
     "static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.png": "/imdb-app/static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.8e2bfbb7dccc509d6971.png",
     "static/media/casablanca.jpg": "/imdb-app/static/media/casablanca.45f43253b1fc2718404e.jpg",
@@ -13,12 +13,12 @@
     "static/media/forrestgump.jpg": "/imdb-app/static/media/forrestgump.a8b297b16bc0aa838e3d.jpg",
     "static/media/pianist.jpg": "/imdb-app/static/media/pianist.f49447317cd4d07bebc5.jpg",
     "index.html": "/imdb-app/index.html",
-    "main.a343128b.css.map": "/imdb-app/static/css/main.a343128b.css.map",
-    "main.28e9a435.js.map": "/imdb-app/static/js/main.28e9a435.js.map",
+    "main.97d42077.css.map": "/imdb-app/static/css/main.97d42077.css.map",
+    "main.9bbe9c47.js.map": "/imdb-app/static/js/main.9bbe9c47.js.map",
     "787.3d4fd0dc.chunk.js.map": "/imdb-app/static/js/787.3d4fd0dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a343128b.css",
-    "static/js/main.28e9a435.js"
+    "static/css/main.97d42077.css",
+    "static/js/main.9bbe9c47.js"
   ]
 }
