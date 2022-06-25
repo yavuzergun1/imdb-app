@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/imdb-app/static/css/main.d705144d.css",
-    "main.js": "/imdb-app/static/js/main.209d68b9.js",
+    "main.js": "/imdb-app/static/js/main.462c8641.js",
     "static/js/787.3d4fd0dc.chunk.js": "/imdb-app/static/js/787.3d4fd0dc.chunk.js",
     "static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.png": "/imdb-app/static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.8e2bfbb7dccc509d6971.png",
     "static/media/casablanca.jpg": "/imdb-app/static/media/casablanca.45f43253b1fc2718404e.jpg",
@@ -14,11 +14,11 @@
     "static/media/pianist.jpg": "/imdb-app/static/media/pianist.f49447317cd4d07bebc5.jpg",
     "index.html": "/imdb-app/index.html",
     "main.d705144d.css.map": "/imdb-app/static/css/main.d705144d.css.map",
-    "main.209d68b9.js.map": "/imdb-app/static/js/main.209d68b9.js.map",
+    "main.462c8641.js.map": "/imdb-app/static/js/main.462c8641.js.map",
     "787.3d4fd0dc.chunk.js.map": "/imdb-app/static/js/787.3d4fd0dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d705144d.css",
-    "static/js/main.209d68b9.js"
+    "static/js/main.462c8641.js"
   ]
 }
