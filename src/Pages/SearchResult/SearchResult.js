@@ -10,8 +10,7 @@ function SearchResult() {
   console.log(title);
 
   if(title === undefined && data[0].Title == "Undefined"){
-    alert("Undefined  Film Name...")
-  return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong  </div>
+  return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong...  <details className="detail">Your film name is "undefined"</details>  </div>
   }
   if (!data) {
     return <p>Loading film data...</p>;
