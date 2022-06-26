@@ -3,6 +3,7 @@ import NavBar from "../../Components/NavBar/NavBar";
 import SearchPanel from "../../Components/SearchPanel/SearchPanel";
 import { UseData } from "../../Context/Context";
 import "./searchResult.scss";
+import {BsExclamationTriangle} from 'react-icons/bs'
 function SearchResult() {
   const { data, favorites, title } = UseData();
   console.log(data);
@@ -10,6 +11,7 @@ function SearchResult() {
 
   if(title === undefined && data[0].Title == "Undefined"){
     alert("Undefined  Film Name...")
+  return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong  </div>
   }
   if (!data) {
     return <p>Loading film data...</p>;
