@@ -17,9 +17,7 @@ function SearchResult() {
     return <p>Loading film data...</p>;
   }
 
-  if (data[3].Title === "Artist Undefined" ){
-    return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong...  <details className="detail">Please write a valid film name...</details>  </div>
-  }
+
 
   return (
     <div className="sr-main">
