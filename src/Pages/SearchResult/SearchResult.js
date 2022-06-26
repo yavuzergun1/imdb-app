@@ -4,13 +4,15 @@ import SearchPanel from "../../Components/SearchPanel/SearchPanel";
 import { UseData } from "../../Context/Context";
 import "./searchResult.scss";
 function SearchResult() {
-  const { data, favorites } = UseData();
+  const { data, favorites, title } = UseData();
   console.log(data);
+  console.log(title);
 
+  if(title === undefined && data[0].Title == "Undefined"){
+    alert("Undefined  Film Name...")
+  }
   if (!data) {
     return <p>Loading film data...</p>;
-  } if(data[0].Title == "Undefined"){
-    alert("Undefined  Film Name...")
   }
 
   return (

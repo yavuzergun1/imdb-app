@@ -27,7 +27,7 @@ function Data() {
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&s=${title}`
       );
-      if (data.Response === "False" /* || data[0].Title === "Undefined" */ ) {
+      if (data.Response === "False" ) {
         throw new SyntaxError();
       }
       !type && setData(data.Search);
