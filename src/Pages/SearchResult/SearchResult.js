@@ -7,13 +7,18 @@ import {BsExclamationTriangle} from 'react-icons/bs'
 function SearchResult() {
   const { data, favorites, title } = UseData();
   console.log(data);
-  console.log(title);
 
   if(title === undefined && data[0].Title == "Undefined"){
-  return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong...  <details className="detail">Your film name is "undefined"</details>  </div>
+  return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong...  <details className="detail">Please write a valid film name...</details>  </div>
   }
+
+  
   if (!data) {
     return <p>Loading film data...</p>;
+  }
+
+  if (data[3].Title === "Artist Undefined" ){
+    return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong...  <details className="detail">Please write a valid film name...</details>  </div>
   }
 
   return (

@@ -15,11 +15,11 @@ function Data() {
           `https://www.omdbapi.com/?apikey=${key}&s=${title}&y=${year}&type=${type}`
         );
         if (data.Response === "False" ) {
-          throw new SyntaxError();
+          throw new SyntaxError(data.Error);
         }
         setData(data.Search);
-      } catch (err) {
-        alert(" Film Could Not Found");
+      } catch (Error) {
+        alert(Error);
       }
     }
   
@@ -27,12 +27,14 @@ function Data() {
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&s=${title}`
       );
+      console.log(data);
       if (data.Response === "False" ) {
-        throw new SyntaxError();
+        throw new SyntaxError(data.Error);
       }
       !type && setData(data.Search);
-    } catch (err) {
-      alert("Film Could Not Found");
+    } catch (Error) {
+      alert(Error);
+      
     }
 
     if (filmId) {
