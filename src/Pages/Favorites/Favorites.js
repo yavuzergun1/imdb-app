@@ -31,7 +31,7 @@ function Favorites() {
         </div>
       </div>
       <section className="fav-main search-result">
-        <div className="favs-container films-container">
+        <div className="favs-container ">
           {localFavorites.map((favorite, index) => {
             return (
               <div className="fav-film results" key={index}>
