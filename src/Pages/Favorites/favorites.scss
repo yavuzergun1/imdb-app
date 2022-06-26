@@ -1,3 +1,7 @@
+.favs-container{
+  display: flex;
+  justify-content: space-between;
+}
 .fav-film {
   width: 383px;
   // margin-right: 40px;
@@ -5,11 +9,5 @@
 @media (max-width: 1050px) {
   .fav-nav {
     height: 190px;
-  }
-  @media (max-width: 500px) {
-    .fav-film{
-      
-    }
-
   }
 }
