@@ -11,6 +11,7 @@ function ImdbID({ film, index, isFavorite }) {
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;
     try {
+      // SearchResult sayfasından gelen film verisinin imdbID'sini alarak tekrar fetchleme yapıyoruz. Böylece apinin ilk aramada bize vermediği detay bilgilerini almış olduk.
       const { data } = await axios.get(
         `https://www.omdbapi.com/?apikey=${key}&i=${film.imdbID}`
       );
@@ -25,9 +26,10 @@ function ImdbID({ film, index, isFavorite }) {
   if (!searchFilmDetail) {
     return <p>Film loading...</p>;
   }
-
+// check değişkeni ilkbaşta işaretli değil o yüzden tıklandığından AddFavorite çalışacak
   let check = <AddFavorite film={searchFilmDetail} />;
   if (isFavorite) {
+    // eğer isfavorite true ise yani film favorilere ekli ise tekrar tıklandığından deleteFavorite çalışır. film favorilerden çıkarılır ve tik kalkar.
     check = <DeleteFavorite favorite={searchFilmDetail} />;
   }
   return (
@@ -39,7 +41,7 @@ function ImdbID({ film, index, isFavorite }) {
             <p>Biography</p>{" "}
           </div>
         </Link>
-        {check}
+        {check} {/* yukarıda tanımlaması ve kontrolü yapılan check değişkeni */}
         <div className="imdb-container">
           <img
             className="imdb"

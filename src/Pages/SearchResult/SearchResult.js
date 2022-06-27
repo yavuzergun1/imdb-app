@@ -8,6 +8,7 @@ function SearchResult() {
   const { data, favorites, title } = UseData();
   console.log(data);
 
+  // eğer searchbar'a herhangi bir veri girilmemişse ve apiden gelen film adı "Undefined" aşağıdaki hata sayfasına gider
   if(title === undefined && data[0].Title == "Undefined"){
   return  <div className="ups"> <p><BsExclamationTriangle/></p> ups! something went wrong...  <details className="detail">Please write a valid film name...</details>  </div>
   }
@@ -38,6 +39,8 @@ function SearchResult() {
       <section className="search-result">
         <div className="films-container">
           {data.map((film, index) => {
+            // filmin favorilere eklenip eklenmediğini kontrol et. eklenmişse isFavorite true değerini ver.
+            // Böylece searchResult sayfasına geri dönüldüğünde favorilere ekli filmler işaretli kalmaya devam eder.
             let isFavorite = false;
             favorites.forEach((favorite) => {
               if (favorite.imdbID == film.imdbID) {
@@ -46,6 +49,7 @@ function SearchResult() {
             });
             return (
               <div className="sr-film" key={`/${index}`}>
+                {/* SearchResult componentine gelen data verisi filmin imdbRating kısmını göstermiyor. bu yüzden film ve index verileri tekrar fetchleme yapılmak üzere SearchDetails componentine gönderildi.  */}
                 <SearchDetails
                   film={film}
                   index={index}

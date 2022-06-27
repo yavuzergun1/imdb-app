@@ -9,24 +9,28 @@ import RDdeleteFavorite from "../../Components/Checkboxes/RDdeleteFavorite";
 function ResultDetail() {
   const { data, setFilmId, filmDetail, favorites } = UseData();
   const { id, imdbid } = useParams();
+  // eğer SearchResult sayfasından filmdetail verisi gelmişse aşağıdaki useEffecti çalıştırır ve useParams ile gönderilen id verisini kullanır.
   useEffect(() => {
-    id && setFilmId(data[id].imdbID);
+    id && setFilmId(data[id].imdbID); /* id verisi gelmeden çalışmaz */
   }, []);
   console.log(filmDetail);
 
+  // eğer Favorites sayfasından tıklama yapılırsa useParams ile imdbid verisi gelir. Bu veri geldiğinde ise aşağıdaki useEffect çalışır.
   useEffect(() => {
-    imdbid && setFilmId(imdbid);
+    imdbid && setFilmId(imdbid); /* imdbid verisi gelmeden çalışmaz */
   }, []);
 
   if (!filmDetail) {
     return <p>Loading Film Data...</p>;
   }
+  // SearchResult sayfasında yapılan kontrolün aynısı burada da yapıldı. 
   let isFavorite = false;
   favorites.forEach((favorite) => {
     if (favorite.imdbID == filmDetail.imdbID) {
       isFavorite = true;
     }
   });
+  // ResultDetaildeki addFavorite tıklamasının kullanıdğı veri ve tasarım farklı olduğu için burada favoriye ekleme/çıkarma işlemleri için farklı componentler kullanıldı.
   let addFavorite = <RDaddFavorite filmDetail={filmDetail} />;
   if (isFavorite) {
     addFavorite = <RDdeleteFavorite filmDetail={filmDetail} />;

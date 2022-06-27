@@ -6,7 +6,7 @@ import "./RDcheckboxes.scss";
 function RDaddFavorites() {
   const { favorites, setFavorites, filmId, filmDetail } = UseData();
   const [checked, setChecked] = useState(true);
-
+// favoriler kısmındaki filmlerin hepsi işaretli olması gerektiği için useState'e true değeri verildi
   const addFavorite = () => {
     setChecked(!checked);
     console.log("add çalıştı");
