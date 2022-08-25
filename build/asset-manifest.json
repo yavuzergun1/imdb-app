@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/imdb-app/static/css/main.10da796d.css",
+    "main.js": "/imdb-app/static/js/main.be35fdcd.js",
+    "static/js/787.3d4fd0dc.chunk.js": "/imdb-app/static/js/787.3d4fd0dc.chunk.js",
+    "static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.png": "/imdb-app/static/media/people-with-popcorn-watching-movie-in-cinema-QZ7BYKJ 1.8e2bfbb7dccc509d6971.png",
+    "static/media/casablanca.jpg": "/imdb-app/static/media/casablanca.45f43253b1fc2718404e.jpg",
+    "static/media/braveheart.jpg": "/imdb-app/static/media/braveheart.250d6edaae98afeb6ec1.jpg",
+    "static/media/esaretinbedeli.jpg": "/imdb-app/static/media/esaretinbedeli.f7da9a85958ac01112d7.jpg",
+    "static/media/avatar.png": "/imdb-app/static/media/avatar.4dbe5f8a4a71a59c3cb7.png",
+    "static/media/godfather.jpg": "/imdb-app/static/media/godfather.2a6173089d739a41cd17.jpg",
+    "static/media/gladiator.jpg": "/imdb-app/static/media/gladiator.62311f41566799ce6be4.jpg",
+    "static/media/forrestgump.jpg": "/imdb-app/static/media/forrestgump.a8b297b16bc0aa838e3d.jpg",
+    "static/media/pianist.jpg": "/imdb-app/static/media/pianist.f49447317cd4d07bebc5.jpg",
+    "index.html": "/imdb-app/index.html",
+    "main.10da796d.css.map": "/imdb-app/static/css/main.10da796d.css.map",
+    "main.be35fdcd.js.map": "/imdb-app/static/js/main.be35fdcd.js.map",
+    "787.3d4fd0dc.chunk.js.map": "/imdb-app/static/js/787.3d4fd0dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10da796d.css",
+    "static/js/main.be35fdcd.js"
+  ]
+}
