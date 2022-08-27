@@ -32,7 +32,7 @@ function ImdbID({ film, index, isFavorite }) {
     // eğer isfavorite true ise yani film favorilere ekli ise tekrar tıklandığından deleteFavorite çalışır. film favorilerden çıkarılır ve tik kalkar.
     check = <DeleteFavorite favorite={searchFilmDetail} />;
   }
-  
+  console.log(searchFilmDetail);
   return (
     <div className="results">
       <div className="results">
@@ -51,7 +51,6 @@ function ImdbID({ film, index, isFavorite }) {
           />
           <p className="rating">{searchFilmDetail.imdbRating}</p>
         </div>
-        <p className="title"> imdbID : {searchFilmDetail.imdbID} </p>
         <p className="year"> {searchFilmDetail.Year}</p>
         <p className="title">{searchFilmDetail.Title} </p>
         <p className="plot">{searchFilmDetail.Plot} </p>
