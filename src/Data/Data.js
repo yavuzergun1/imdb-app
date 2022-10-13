@@ -9,7 +9,7 @@ function Data() {
   const getData = async () => {
     const key = process.env.REACT_APP_FILM_DATA;
     // api year girilip type girilmediği zaman hata verebiliyor. Bu yüzden  alttaki api her ikisinin de girilmesi halinde çalışacak
-    if (type !== undefined && year !== undefined ) {
+    if (type !== undefined || year !== undefined ) {
       try {
         const { data } = await axios.get(
           `https://www.omdbapi.com/?apikey=${key}&s=${title}&y=${year}&type=${type}`
